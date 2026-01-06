@@ -39,19 +39,20 @@ const Resume = () => {
       location: "台北市大安區",
       size: "銀行業 500人以上 / 管理 9~12 人",
       description: "負責人工智慧治理、基礎工程、團隊及專案管理、數據分析、預測模型及 LLM 應用。",
-      tags: ["SQL", "Python", "AI治理", "MLOps", "PMP", "Scrum"],
+      tags: ["Machine learning", "Python", "SQL", "AI治理", "MLOps", "PMP", "Scrum"],
       details: [
         "AI 治理：銀行公會 AI 治理法規制定小組成員，制定銀行「數據分析模型管理辦法」。",
 		"團隊及專案管理：具備Scrum及PMP實務經驗，能有效協調跨部門資源，制定可落地規劃。",
         "基礎架構：以 DBT 開發3000+ 數據標籤中心、建立 CI/CD 機制，並導入 MLOps 平台。",
-        "數據分析與模型：應用 GRU, LGBM, XGBM 等建立模型，並開發 Fubon+ App 即時推薦功能。",
-        "LLM 研發：開發投資研究摘要、理專對話功能，建立高效平台。"
+		"數據分析：透過數據探索分析行銷決策之潛在影響及未來商機。",
+        "數據模型：應用 GRU、LGBM、XGBM 等方法建立模型，並開發 Fubon+ App 即時推薦功能。",
+        "LLM 研發：開發投資研究摘要、理專對話功能，建立 LLM 摘要平台。"
       ],
       projects: [
-        { name: "好市多卡分析專案", desc: "預測辦卡客群，助攻 200 萬張發卡。" },
-        { name: "房貸潛力客群模型", desc: "精準行銷模型，成效達 Baseline 7 倍。" },
-		{ name: "Fubon+ app 推薦模型", desc: "推薦排序模型，中台即時運算。" },
-        { name: "信卡權益變動分析", desc: "預測調降衝擊，擬定留客策略。" }
+        { name: "信用卡", desc: "好市多卡分析專案，預測辦卡客群，助攻 200 萬張發卡。" },
+        { name: "消費金融", desc: "建立房貸潛力客群模型精準行銷，成效達 Baseline 7 倍。" },
+		{ name: "數位金融", desc: "開發Fubon+ app即時推薦排序模型、建立即時數軌分析機制。" },
+        { name: "理財產品", desc: "建立理財客群分析儀表版，掌握客戶動態趨勢。" }
       ]
     },
     {
@@ -61,9 +62,9 @@ const Resume = () => {
       location: "台北市松山區",
       size: "工商顧問業 500人以上 / 管理 4人以下",
       description: "專注於鑑識會計、法遵制度導入、個資保護及資安查核服務。",
-      tags: ["Forensic", "Python", "MSSQL", "VBA", "ISO27001"],
+      tags: ["Forensic", "Python", "MSSQL", "VBA","Legal Compliance", "ISO27001"],
       details: [
-        "鑑識會計：透過數據還原真相，參與 8 個專案，其中 2 案擔任專案主管。",
+        "鑑識會計：透過數據探索出具調查報告，參與 8 個專案，其中 2 案擔任專案主管。",
         "法遵制度：擔任 PM 規劃遵法管理政策、辨識相關控制與差異評估。",
         "稽核查核：執行 ISO27001、GDPR、PIMS 及銀行電子支付查核專案。"
       ]
@@ -75,7 +76,7 @@ const Resume = () => {
       location: "台北市信義區",
       size: "會計服務業 500人以上",
       description: "執行財務報表查核及公司稅務申報工作。",
-      tags: ["Audit", "Tax Compliance", "Internal Control"],
+      tags: ["Audit", "Tax"],
       details: [
         "財務審計：參與 6 間公司財報查核，涵蓋信用狀與金融商品交易項目。",
         "稅務申報：負責稅務憑證抽核、稅務調節表編製及報告撰寫。"
@@ -88,9 +89,11 @@ const Resume = () => {
     { title: "國際專案管理師 (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-500" /> },
     { title: "AI應用規劃師(中級)", icon: <Database className="w-4 h-4 text-green-600" /> },
     { title: "IBM Data Science Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
+	{ title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
     { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-500" /> },
     { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-indigo-500" /> },
-    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-purple-500" /> }
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-purple-500" /> },
+	{ title: "UiPath_RPA Developer Diploma", icon: <Cpu className="w-4 h-4 text-purple-500" /> }
   ];
 
   return (
@@ -110,16 +113,13 @@ const Resume = () => {
                   onError={(e) => { e.target.src = "https://via.placeholder.com/200?text=Albert"; }}
                 />
               </div>
-              <div className="absolute -bottom-3 -right-3 bg-blue-600 text-white p-2 rounded-xl shadow-lg">
-                <Award className="w-6 h-6" />
-              </div>
             </div>
 
             {/* 基本資料 */}
             <div className="flex-1 text-center md:text-left">
               <div className="mb-4">
-                <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">Albert</h1>
-                <p className="text-xl text-blue-700 font-bold mt-2">數據科學主管 | 數據分析｜數據科學｜策略分析｜AI治理｜經營管理</p>
+                <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">Albert Liu</h1>
+                <p className="text-xl text-blue-700 font-bold mt-2">數據科學主管 | 數據分析｜數據科學｜AI治理｜策略分析｜經營管理｜專案管理</p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 text-sm text-slate-600">
@@ -138,7 +138,7 @@ const Resume = () => {
               </div>
 
               <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-2">
-                {["AI Governance", "MLOps", "Data Modeling", "Forensic Accounting"].map(skill => (
+                {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
                   <span key={skill} className="bg-slate-900 text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide">
                     {skill}
                   </span>
@@ -182,8 +182,8 @@ const Resume = () => {
                   </div>
                 ))}
                 <div className="p-3 bg-slate-50 rounded-xl border border-dashed border-slate-300">
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">其餘金融證照</p>
-                  <p className="text-xs text-slate-500">銀行內控、授信人員、外匯人員、AML、金融科技力、法令遵循</p>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">金融證照</p>
+                  <p className="text-xs text-slate-500">銀行內稽內控、授信人員、外匯人員、洗錢防制、金融科技力、法令遵循</p>
                 </div>
               </div>
             </section>
@@ -206,7 +206,7 @@ const Resume = () => {
                 <div>
                   <p className="text-xs font-black text-blue-600 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-2">
-                    {["Tableau", "Pandas", "Scikit-learn", "Vector Search"].map(t => (
+                    {["Tableau", "Scikit-learn"].map(t => (
                       <span key={t} className="px-3 py-1 bg-slate-100 rounded-lg text-xs font-bold text-slate-700">{t}</span>
                     ))}
                   </div>
