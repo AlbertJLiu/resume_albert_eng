@@ -107,7 +107,7 @@ const Resume = () => {
             <div className="flex-1 text-center md:text-left">
               <div className="mb-4">
                 <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">Albert</h1>
-                <p className="text-xl text-blue-700 font-bold mt-2">數據科學主管 | 金融科技 & 法遵專家</p>
+                <p className="text-xl text-blue-700 font-bold mt-2">數據科學主管 | 數據分析｜數據科學｜策略分析｜AI治理｜經營管理</p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 text-sm text-slate-600">
@@ -115,13 +115,13 @@ const Resume = () => {
                   <Briefcase className="w-4 h-4 mr-2 text-slate-400" /> 總年資 11~12 年經驗
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <MapPin className="w-4 h-4 mr-2 text-slate-400" /> 台北市
+                  <MapPin className="w-4 h-4 mr-2 text-slate-400" /> 台北市大安區
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <Mail className="w-4 h-4 mr-2 text-slate-400" /> 歡迎聯繫面談
+                  <Mail className="w-4 h-4 mr-2 text-slate-400" /> albertliu141@gmail.com
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-400" /> 具 PMP & Scrum 證照
+                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-400" /> CPA | PMP | IBM DS | AI應用規劃師(中級)
                 </div>
               </div>
 
