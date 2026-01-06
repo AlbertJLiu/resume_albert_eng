@@ -4,7 +4,7 @@ import React from 'react';
 import { 
   Database, ShieldCheck, Layout, TrendingUp, Cpu, Users, 
   Briefcase, CheckCircle2, Code2, BarChart3, GraduationCap, 
-  Calendar, MapPin, Award, Mail, ChevronRight
+  Calendar, MapPin, Award, Mail, ChevronRight, Binary, FileCheck
 } from 'lucide-react';
 
 const Resume = () => {
@@ -12,13 +12,13 @@ const Resume = () => {
   const education = [
     {
       school: "國立臺灣大學",
-      degree: "商學研究所碩士 (最高學歷)",
+      degree: "商學研究所碩士",
       period: "2023/02 ~ 2025/06",
       status: "畢業"
     },
     {
       school: "國立政治大學",
-      degree: "法律系大學部",
+      degree: "法律系 (主系)",
       period: "2010/09 ~ 2014/07",
       status: "畢業"
     },
@@ -41,15 +41,17 @@ const Resume = () => {
       description: "負責人工智慧治理、基礎工程、團隊及專案管理、數據分析、預測模型及 LLM 應用。",
       tags: ["SQL", "Python", "AI治理", "MLOps", "PMP", "Scrum"],
       details: [
-        "AI 治理：擔任銀行公會 AI 治理法規制定小組成員，制定內部「數據分析模型管理辦法」。",
-        "工程導入：以 Python DBT 開發 3000+ 數據標籤中心，建立 CI/CD 機制並推動 MLOps 系統。",
+        "AI 治理：銀行公會 AI 治理法規制定小組成員，制定銀行「數據分析模型管理辦法」。",
+		"團隊及專案管理：具備Scrum及PMP實務經驗，能有效協調跨部門資源，制定可落地規劃。",
+        "基礎架構：以 DBT 開發3000+ 數據標籤中心、建立 CI/CD 機制，並導入 MLOps 平台。",
         "數據分析與模型：應用 GRU, LGBM, XGBM 等建立模型，並開發 Fubon+ App 即時推薦功能。",
-        "LLM 研發：開發投資研究摘要、理專對話功能及 no-code 自動化行銷內容生產平台。"
+        "LLM 研發：開發投資研究摘要、理專對話功能，建立高效平台。"
       ],
       projects: [
-        { name: "好市多卡行銷", desc: "AUC 92%，預測辦卡客群，助攻年度發卡量 200 萬張。" },
-        { name: "房貸潛力客群", desc: "精準行銷模型，成效達 Baseline 7 倍。" },
-        { name: "信卡權益變動分析", desc: "以 Rsquare 0.92 預測調降衝擊，擬定留客策略。" }
+        { name: "好市多卡分析專案", desc: "預測辦卡客群，助攻 200 萬張發卡。" },
+        { name: "房貸潛力客群模型", desc: "精準行銷模型，成效達 Baseline 7 倍。" },
+		{ name: "Fubon+ app 推薦模型", desc: "推薦排序模型，中台即時運算。" },
+        { name: "信卡權益變動分析", desc: "預測調降衝擊，擬定留客策略。" }
       ]
     },
     {
@@ -79,6 +81,16 @@ const Resume = () => {
         "稅務申報：負責稅務憑證抽核、稅務調節表編製及報告撰寫。"
       ]
     }
+  ];
+  
+  const certificates = [
+    { title: "高考會計師 (CPA)", icon: <Award className="w-4 h-4 text-amber-500" /> },
+    { title: "國際專案管理師 (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-500" /> },
+    { title: "AI應用規劃師(中級)", icon: <Database className="w-4 h-4 text-green-600" /> },
+    { title: "IBM Data Science Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-500" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-indigo-500" /> },
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-purple-500" /> }
   ];
 
   return (
@@ -139,7 +151,9 @@ const Resume = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           
           {/* 左側：學歷與技能 (1/3 寬度) */}
-          <div className="lg:col-span-1 space-y-10">
+          <div className="lg:col-span-1 space-y-8">
+
+            {/* 教育背景 */}
             <section>
               <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
                 <GraduationCap className="w-6 h-6 mr-2 text-blue-600" /> 學歷背景
@@ -148,36 +162,59 @@ const Resume = () => {
                 {education.map((edu, i) => (
                   <div key={i} className={`p-5 rounded-2xl border ${i === 0 ? 'bg-blue-50 border-blue-200' : 'bg-white border-slate-200'}`}>
                     <p className="text-xs font-bold text-blue-600 mb-1">{edu.period}</p>
-                    <h3 className="font-bold text-slate-900">{edu.school}</h3>
-                    <p className="text-sm text-slate-600 mt-1">{edu.degree}</p>
+                    <h3 className="font-bold text-slate-900 text-sm">{edu.school}</h3>
+                    <p className="text-xs text-slate-600 mt-1">{edu.degree}</p>
                   </div>
                 ))}
               </div>
             </section>
-
+ 
+            {/* 專業證照 */}
             <section>
               <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
-                <Code2 className="w-6 h-6 mr-2 text-blue-600" /> 專業技能
+                <Award className="w-6 h-6 mr-2 text-blue-600" /> 專業證照
               </h2>
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <div className="space-y-4 text-sm">
-                  <div>
-                    <p className="font-bold text-slate-800 mb-2">數據技術</p>
-                    <p className="text-slate-600">SQL, Python, MongoDB, Impala, Hive, DBT, Tableau</p>
+			  <div className="space-y-3">
+                {certificates.map((cert, i) => (
+                  <div key={i} className="flex items-center p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
+                    {cert.icon}
+                    <span className="ml-3 text-sm font-semibold text-slate-700">{cert.title}</span>
                   </div>
-                  <hr />
-                  <div>
-                    <p className="font-bold text-slate-800 mb-2">AI 與模型</p>
-                    <p className="text-slate-600">XGBoost, LGBM, GRU, LLM 應用, AutoML</p>
+                ))}
+                <div className="p-3 bg-slate-50 rounded-xl border border-dashed border-slate-300">
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">其餘金融證照</p>
+                  <p className="text-xs text-slate-500">銀行內控、授信人員、外匯人員、AML、金融科技力、法令遵循</p>
+                </div>
+              </div>
+            </section>
+
+           {/* 核心技能 */}
+            <section>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
+                <Code2 className="w-6 h-6 mr-2 text-blue-600" /> 專業工具
+              </h2>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+                <div>
+                  <p className="text-xs font-black text-blue-600 uppercase mb-2 tracking-wider">Programming & DB</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
+                      <span key={t} className="px-3 py-1 bg-slate-100 rounded-lg text-xs font-bold text-slate-700">{t}</span>
+                    ))}
                   </div>
-                  <hr />
-                  <div>
-                    <p className="font-bold text-slate-800 mb-2">治理與管理</p>
-                    <p className="text-slate-600">AI Governance, MLOps, CI/CD, Scrum, PMP</p>
+                </div>
+                <hr />
+                <div>
+                  <p className="text-xs font-black text-blue-600 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Tableau", "Pandas", "Scikit-learn", "Vector Search"].map(t => (
+                      <span key={t} className="px-3 py-1 bg-slate-100 rounded-lg text-xs font-bold text-slate-700">{t}</span>
+                    ))}
                   </div>
                 </div>
               </div>
             </section>
+
+
           </div>
 
           {/* 右側：工作經歷 (2/3 寬度) */}
