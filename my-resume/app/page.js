@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { 
-  Database, ShieldCheck, Layout, TrendingUp, Cpu, Users, 
+  Database, ShieldCheck, Layout, TrendingUp, Cpu, Users, Diameter, Calculator, Binoculars,
   Briefcase, CheckCircle2, Code2, BarChart3, GraduationCap, 
   Calendar, MapPin, Award, Mail, ChevronRight, Binary, FileCheck
 } from 'lucide-react';
@@ -87,13 +87,13 @@ const Resume = () => {
   const certificates = [
     { title: "高考會計師 (CPA)", icon: <Award className="w-4 h-4 text-amber-500" /> },
     { title: "國際專案管理師 (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-500" /> },
-    { title: "AI應用規劃師(中級)", icon: <Database className="w-4 h-4 text-green-600" /> },
-    { title: "IBM Data Science Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
+    { title: "AI應用規劃師(中級)", icon: <Diameter className="w-4 h-4 text-green-600" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-blue-600" /> },
 	{ title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
     { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-500" /> },
     { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-indigo-500" /> },
     { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-purple-500" /> },
-	{ title: "UiPath_RPA Developer Diploma", icon: <Cpu className="w-4 h-4 text-purple-500" /> }
+	{ title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-purple-500" /> }
   ];
 
   return (
