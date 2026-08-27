@@ -30,7 +30,7 @@ const Resume = () => {
     }
   ];
 
-  // Patents Data (已預設 7 項專利佔位資料)
+  // Patents Data
   const patents = [
     {
       title: "Financial AI Model Risk & Compliance Analytics System",
@@ -80,7 +80,7 @@ const Resume = () => {
   const experiences = [
     {
       company: "Taipei Fubon Bank",
-      role: "Vice President | Chief of Data Science Section",
+      role: "Vice President | Chief of Data Science & Development Section",
       period: "2019/07 ~ Present",
       location: "Daan Dist., Taipei City",
       size: "Managing 10+ people",
@@ -198,7 +198,7 @@ const Resume = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           
-          {/* Left Column: Education & Skills (1/3 Width) */}
+          {/* Left Column: Education, Certs, Tools, Patents (1/3 Width) */}
           <div className="lg:col-span-1 space-y-8">
 
             {/* Education */}
@@ -216,7 +216,7 @@ const Resume = () => {
                 ))}
               </div>
             </section>
- 
+
             {/* Certifications */}
             <section>
               <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
@@ -236,7 +236,7 @@ const Resume = () => {
               </div>
             </section>
 
-           {/* Technical Tools */}
+            {/* Technical Tools */}
             <section>
               <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
                 <Code2 className="w-6 h-6 mr-2 text-blue-600" /> Technical Tools
@@ -262,9 +262,30 @@ const Resume = () => {
               </div>
             </section>
 
+            {/* Patents Section */}
+            <section>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
+                <FileCheck className="w-6 h-6 mr-2 text-blue-600" /> Patents
+              </h2>
+              <div className="space-y-3">
+                {patents.map((item, i) => (
+                  <div key={i} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-0.5 rounded-md border border-blue-100">
+                        {item.number}
+                      </span>
+                      <span className="text-xs text-slate-400 font-semibold">{item.year}</span>
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-xs leading-snug">{item.title}</h3>
+                    <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </div>
 
-          {/* Right Column: Work Experience & Patents (2/3 Width) */}
+          {/* Right Column: Work Experience (2/3 Width) */}
           <div className="lg:col-span-2 space-y-12">
             
             {/* Work Experience */}
@@ -276,14 +297,16 @@ const Resume = () => {
                 {experiences.map((exp, idx) => (
                   <div key={idx} className="relative group">
                     <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="flex flex-col md:flex-row justify-between items-start mb-6">
+                      <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                         <div>
                           <h3 className="text-2xl font-bold text-slate-900">{exp.company}</h3>
                           <p className="text-blue-600 font-bold text-lg mt-1">{exp.role}</p>
                           <p className="text-xs text-slate-400 mt-1">{exp.size}</p>
                         </div>
-                        <div className="mt-3 md:mt-0 px-4 py-1.5 bg-slate-100 rounded-lg text-slate-600 text-sm font-bold flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" /> {exp.period}
+                        
+                        {/* 修正日期標籤：加入 whitespace-nowrap 與 shrink-0 防止被壓縮換行 */}
+                        <div className="px-3.5 py-1.5 bg-slate-100 rounded-lg text-slate-600 text-xs md:text-sm font-bold flex items-center whitespace-nowrap shrink-0">
+                          <Calendar className="w-4 h-4 mr-2 shrink-0" /> {exp.period}
                         </div>
                       </div>
 
@@ -318,29 +341,6 @@ const Resume = () => {
                           </span>
                         ))}
                       </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Patents Section */}
-            <section>
-              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
-                <FileCheck className="w-6 h-6 mr-2 text-blue-600" /> Patents
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {patents.map((item, i) => (
-                  <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[10px] font-bold bg-blue-50 text-blue-600 px-2.5 py-1 rounded-md border border-blue-100">
-                          {item.number}
-                        </span>
-                        <span className="text-xs text-slate-400 font-semibold">{item.year}</span>
-                      </div>
-                      <h3 className="font-bold text-slate-900 text-sm leading-snug">{item.title}</h3>
-                      <p className="text-xs text-slate-500 mt-2 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
