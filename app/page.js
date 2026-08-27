@@ -30,6 +30,53 @@ const Resume = () => {
     }
   ];
 
+
+// Patents Data (已預設 7 項專利佔位資料)
+  const patents = [
+    {
+      title: "Financial AI Model Risk & Compliance Analytics System",
+      number: "Patent No. I123456",
+      year: "2024",
+      desc: "Method and system for automated AI governance and model auditing."
+    },
+    {
+      title: "Real-Time Customer Recommendation Engine Architecture",
+      number: "Patent No. I234567",
+      year: "2023",
+      desc: "Deep learning recommendation ranking mechanism for mobile banking."
+    },
+    {
+      title: "Enterprise Data Tag Center Automation Framework",
+      number: "Patent No. M345678",
+      year: "2023",
+      desc: "Automated data pipeline and lineage tracking system."
+    },
+    {
+      title: "Mortgage Lead Predictive Scoring Engine",
+      number: "Patent No. M456789",
+      year: "2022",
+      desc: "Machine learning algorithm for high-intent client identification."
+    },
+    {
+      title: "Cross-Platform Forensic Data Audit Method",
+      number: "Patent No. I567890",
+      year: "2021",
+      desc: "High-volume transactional anomaly detection mechanism."
+    },
+    {
+      title: "Automated Compliance & Gap Assessment System",
+      number: "Patent No. M678901",
+      year: "2020",
+      desc: "Rule-engine based regulatory policy auditing system."
+    },
+    {
+      title: "Tax Reconciliation & Sampling Data Engine",
+      number: "Patent No. M789012",
+      year: "2019",
+      desc: "Financial data reconciliation and verification algorithm."
+    }
+  ];
+
   // Work Experience Data
   const experiences = [
     {
