@@ -30,8 +30,7 @@ const Resume = () => {
     }
   ];
 
-
-// Patents Data (已預設 7 項專利佔位資料)
+  // Patents Data (已預設 7 項專利佔位資料)
   const patents = [
     {
       title: "Financial AI Model Risk & Compliance Analytics System",
@@ -265,61 +264,89 @@ const Resume = () => {
 
           </div>
 
-          {/* Right Column: Work Experience (2/3 Width) */}
-          <div className="lg:col-span-2">
-            <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
-              <Briefcase className="w-6 h-6 mr-2 text-blue-600" /> Work Experience
-            </h2>
-            <div className="space-y-10">
-              {experiences.map((exp, idx) => (
-                <div key={idx} className="relative group">
-                  <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex flex-col md:flex-row justify-between items-start mb-6">
-                      <div>
-                        <h3 className="text-2xl font-bold text-slate-900">{exp.company}</h3>
-                        <p className="text-blue-600 font-bold text-lg mt-1">{exp.role}</p>
-                        <p className="text-xs text-slate-400 mt-1">{exp.size}</p>
+          {/* Right Column: Work Experience & Patents (2/3 Width) */}
+          <div className="lg:col-span-2 space-y-12">
+            
+            {/* Work Experience */}
+            <section>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
+                <Briefcase className="w-6 h-6 mr-2 text-blue-600" /> Work Experience
+              </h2>
+              <div className="space-y-10">
+                {experiences.map((exp, idx) => (
+                  <div key={idx} className="relative group">
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                          <h3 className="text-2xl font-bold text-slate-900">{exp.company}</h3>
+                          <p className="text-blue-600 font-bold text-lg mt-1">{exp.role}</p>
+                          <p className="text-xs text-slate-400 mt-1">{exp.size}</p>
+                        </div>
+                        <div className="mt-3 md:mt-0 px-4 py-1.5 bg-slate-100 rounded-lg text-slate-600 text-sm font-bold flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" /> {exp.period}
+                        </div>
                       </div>
-                      <div className="mt-3 md:mt-0 px-4 py-1.5 bg-slate-100 rounded-lg text-slate-600 text-sm font-bold flex items-center">
-                        <Calendar className="w-4 h-4 mr-2" /> {exp.period}
-                      </div>
-                    </div>
 
-                    <p className="text-slate-700 font-medium mb-4 leading-relaxed">{exp.description}</p>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {exp.details.map((detail, dIdx) => (
-                        <li key={dIdx} className="flex text-sm text-slate-600 leading-relaxed">
-                          <ChevronRight className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-1" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
+                      <p className="text-slate-700 font-medium mb-4 leading-relaxed">{exp.description}</p>
+                      
+                      <ul className="space-y-3 mb-8">
+                        {exp.details.map((detail, dIdx) => (
+                          <li key={dIdx} className="flex text-sm text-slate-600 leading-relaxed">
+                            <ChevronRight className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-1" />
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
 
-                    {exp.projects && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        {exp.projects.map((proj, pIdx) => (
-                          <div key={pIdx} className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                            <p className="font-bold text-blue-900 text-sm flex items-center">
-                              <TrendingUp className="w-4 h-4 mr-2 text-blue-600" /> {proj.name}
-                            </p>
-                            <p className="text-xs text-blue-700 mt-2 leading-relaxed">{proj.desc}</p>
-                          </div>
+                      {exp.projects && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                          {exp.projects.map((proj, pIdx) => (
+                            <div key={pIdx} className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                              <p className="font-bold text-blue-900 text-sm flex items-center">
+                                <TrendingUp className="w-4 h-4 mr-2 text-blue-600" /> {proj.name}
+                              </p>
+                              <p className="text-xs text-blue-700 mt-2 leading-relaxed">{proj.desc}</p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-2">
+                        {exp.tags.map(tag => (
+                          <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded font-black tracking-widest uppercase">
+                            #{tag}
+                          </span>
                         ))}
                       </div>
-                    )}
-
-                    <div className="flex flex-wrap gap-2">
-                      {exp.tags.map(tag => (
-                        <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded font-black tracking-widest uppercase">
-                          #{tag}
-                        </span>
-                      ))}
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Patents Section */}
+            <section>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
+                <FileCheck className="w-6 h-6 mr-2 text-blue-600" /> Patents
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {patents.map((item, i) => (
+                  <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[10px] font-bold bg-blue-50 text-blue-600 px-2.5 py-1 rounded-md border border-blue-100">
+                          {item.number}
+                        </span>
+                        <span className="text-xs text-slate-400 font-semibold">{item.year}</span>
+                      </div>
+                      <h3 className="font-bold text-slate-900 text-sm leading-snug">{item.title}</h3>
+                      <p className="text-xs text-slate-500 mt-2 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </div>
 
         </div>
