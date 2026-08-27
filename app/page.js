@@ -39,7 +39,7 @@ const Resume = () => {
       location: "Daan Dist., Taipei City",
       size: "Managing 10+ people",
       description: "Responsible for AI governance, DS infrastructure, team & project management, data analytics, predictive modeling, and LLM applications.",
-      tags: ["Machine learning", "Python", "SQL", "AI Governance", "MLOps", "PMP", "Scrum"],
+      tags: ["Machine learning", "Python", "SQL", "AI Governance", "MLOps", "autoML", "Scrum"],
       details: [
         "AI Governance: Member of the Bankers Association AI Governance Regulatory Task Force; drafted the bank's 'Data Analytics Model Management Policy'.",
         "Team & Project Management: Hands-on experience in Scrum and PMP; effectively coordinated cross-functional resources to execute actionable plans.",
