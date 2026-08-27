@@ -87,7 +87,7 @@ const Resume = () => {
   const certificates = [
     { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-amber-500" /> },
     { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-500" /> },
-    { title: "AI Application Planner (Intermediate)", icon: <Diameter className="w-4 h-4 text-green-600" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-green-600" /> },
     { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-blue-600" /> },
     { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
     { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-500" /> },
