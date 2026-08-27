@@ -34,11 +34,11 @@ const Resume = () => {
   const experiences = [
     {
       company: "Taipei Fubon Bank",
-      role: "Vice President, Data Science Division",
+      role: "Vice President | Chief of Data Science & Development Section",
       period: "2019/07 ~ Present",
       location: "Daan Dist., Taipei City",
-      size: "Banking (500+ employees) / Managing 9–12 people",
-      description: "Responsible for AI governance, data infrastructure, team & project management, data analytics, predictive modeling, and LLM applications.",
+      size: "Managing 10+ people",
+      description: "Responsible for AI governance, DS infrastructure, team & project management, data analytics, predictive modeling, and LLM applications.",
       tags: ["Machine learning", "Python", "SQL", "AI Governance", "MLOps", "PMP", "Scrum"],
       details: [
         "AI Governance: Member of the Bankers Association AI Governance Regulatory Task Force; drafted the bank's 'Data Analytics Model Management Policy'.",
