@@ -34,7 +34,7 @@ const Resume = () => {
   const experiences = [
     {
       company: "Taipei Fubon Bank",
-      role: "Section Manager, Data Science Division",
+      role: "Vice President, Data Science Division",
       period: "2019/07 ~ Present",
       location: "Daan Dist., Taipei City",
       size: "Banking (500+ employees) / Managing 9–12 people",
