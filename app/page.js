@@ -80,7 +80,7 @@ const Resume = () => {
   const experiences = [
     {
       company: "Taipei Fubon Bank",
-      role: "Vice President | Chief of Data Science & Development Section",
+      role: "Vice President | Chief of Data Science Section",
       period: "2019/07 ~ Present",
       location: "Daan Dist., Taipei City",
       size: "Managing 10+ people",
