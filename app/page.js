@@ -33,28 +33,27 @@ const Resume = () => {
   // Patents Data
   const patents = [
     {
+      title: "REAL-TIME LOAN NOTIFICATION SYSTEM",
+      year: "2026",
+    },
+    {
       title: "FPERSONALIZED RANKING AND RECOMMENDATION SYSTEM",
-      number: "Patent No. TWMXXXXXX",
       year: "2026",
     },
     {
       title: "LABEL LIBRARY SYSTEM",
-      number: "Patent No. TWMXXXXXX",
       year: "2026",
     },
     {
       title: "MODULAR MODELING SYSTEM",
-      number: "Patent No. TWMXXXXXX",
       year: "2026",
     },
     {
       title: "CREDIT CARD MERCHANT NAME INTEGRATION SYSTEM",
-      number: "Patent No. TWM676664U",
       year: "2025",
     },
     {
       title: "COPTIMAL CONTACT TIME RECOMMENDATION SYSTEM",
-      number: "Patent No. TWM676626U",
       year: "2025",
     }
   ];
