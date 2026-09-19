@@ -41,7 +41,7 @@ const Resume = () => {
       year: "2026",
     },
     {
-      title: "LABEL LIBRARY SYSTEM",
+      title: "FEATURE STORE SYSTEM",
       year: "2026",
     },
     {
