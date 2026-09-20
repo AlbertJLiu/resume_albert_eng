@@ -64,11 +64,11 @@ const Resume = () => {
     }
   ];
 
-  // Work Experience Data
+  // Work Experience Data (縮短職稱文字防尷尬換行)
   const experiences = [
     {
       company: "Taipei Fubon Bank",
-      role: "Vice President | Chief of Data Science & Development Section",
+      role: "Vice President | Chief of DS & Development Section",
       period: "2019/07 ~ Present",
       location: "Daan Dist., Taipei City",
       size: "Managing 10+ people",
@@ -118,24 +118,24 @@ const Resume = () => {
     }
   ];
   
-  // 證照 Icon 統一採用高質感藍色
+  // Icon 採用低調沉穩的深鋼灰色 (slate-700)
   const certificates = [
-    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-blue-600" /> },
-    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-600" /> },
-    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-blue-600" /> },
-    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-blue-600" /> },
-    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
-    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-blue-600" /> },
-    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-blue-600" /> },
-    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-blue-600" /> },
-    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-blue-600" /> }
+    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-slate-700" /> },
+    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-slate-700" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-slate-700" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-slate-700" /> },
+    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-slate-700" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-slate-700" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-slate-700" /> },
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-slate-700" /> },
+    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-slate-700" /> }
   ];
 
   return (
     <div className="min-h-screen bg-slate-100/90 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
       <div className="max-w-5xl mx-auto">
         
-        {/* 個人資料 Header: 深色高階 Banner */}
+        {/* 個人資料 Header: 高階深色 Banner */}
         <header className="bg-slate-900 text-slate-100 rounded-2xl shadow-xl p-6 md:p-10 mb-8 border border-slate-800">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             {/* Profile Image Container */}
@@ -155,12 +155,10 @@ const Resume = () => {
               <div className="mb-3">
                 <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">Albert Liu</h1>
                 
-                {/* 避免自動換行：whitespace-nowrap + overflow-x-auto */}
-                <div className="overflow-x-auto no-scrollbar py-1">
-                  <p className="text-base md:text-lg text-slate-300 font-bold tracking-tight leading-snug whitespace-nowrap">
-                    Data Science Section Manager | Data Analytics | AI Governance | Strategic Planning | Project Management
-                  </p>
-                </div>
+                {/* 縮小字體並適度精簡文字，確保不尷尬斷行 */}
+                <p className="text-xs sm:text-sm text-slate-300 font-semibold tracking-tight mt-1 leading-normal">
+                  Data Science Section Manager | Data Analytics | AI Governance | PM & Strategy
+                </p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5 text-xs md:text-sm text-slate-300 font-medium">
@@ -190,21 +188,21 @@ const Resume = () => {
           </div>
         </header>
 
-        {/* 原本的雙欄架構 (1/3 左側欄 + 2/3 右側欄) */}
+        {/* 雙欄架構 (1/3 左側欄 + 2/3 右側欄) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* 左側欄位 (1/3 寬度): 方框採用 bg-slate-50/90 淺灰底，搭配藍色 Icon */}
+          {/* 左側欄位 (1/3 寬度): 柔和淺灰底卡片 + 深鋼灰 Icon */}
           <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <GraduationCap className="w-4 h-4 mr-2 text-blue-600" /> Education
+                <GraduationCap className="w-4 h-4 mr-2 text-slate-700" /> Education
               </h2>
               <div className="space-y-2.5">
                 {education.map((edu, i) => (
-                  <div key={i} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/90 shadow-sm hover:border-blue-300 transition-colors">
-                    <p className="text-[11px] font-bold text-blue-600 mb-0.5">{edu.period}</p>
+                  <div key={i} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/90 shadow-sm hover:border-slate-300 transition-colors">
+                    <p className="text-[11px] font-bold text-slate-500 mb-0.5">{edu.period}</p>
                     <h3 className="font-bold text-slate-900 text-xs md:text-sm">{edu.school}</h3>
                     <p className="text-xs text-slate-600 mt-0.5">{edu.degree}</p>
                   </div>
@@ -215,17 +213,17 @@ const Resume = () => {
             {/* Certifications */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <Award className="w-4 h-4 mr-2 text-blue-600" /> Certifications
+                <Award className="w-4 h-4 mr-2 text-slate-700" /> Certifications
               </h2>
               <div className="space-y-2">
                 {certificates.map((cert, i) => (
-                  <div key={i} className="flex items-center p-2.5 bg-slate-50/90 rounded-lg border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                  <div key={i} className="flex items-center p-2.5 bg-slate-50/90 rounded-lg border border-slate-200 shadow-sm hover:border-slate-300 transition-colors">
                     {cert.icon}
                     <span className="ml-2.5 text-xs font-semibold text-slate-800">{cert.title}</span>
                   </div>
                 ))}
-                <div className="p-3 bg-blue-50/40 rounded-lg border border-blue-200/60">
-                  <p className="text-[10px] text-blue-800 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
+                <div className="p-3 bg-slate-200/50 rounded-lg border border-slate-300/60">
+                  <p className="text-[10px] text-slate-600 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
                   <p className="text-xs text-slate-700 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
                 </div>
               </div>
@@ -234,11 +232,11 @@ const Resume = () => {
             {/* Technical Tools */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <Code2 className="w-4 h-4 mr-2 text-blue-600" /> Technical Tools
+                <Code2 className="w-4 h-4 mr-2 text-slate-700" /> Technical Tools
               </h2>
               <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200 shadow-sm space-y-3.5">
                 <div>
-                  <p className="text-[10px] font-bold text-blue-700 uppercase mb-2 tracking-wider">Programming & DB</p>
+                  <p className="text-[10px] font-bold text-slate-600 uppercase mb-2 tracking-wider">Programming & DB</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
                       <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
@@ -247,7 +245,7 @@ const Resume = () => {
                 </div>
                 <hr className="border-slate-200/60" />
                 <div>
-                  <p className="text-[10px] font-bold text-blue-700 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
+                  <p className="text-[10px] font-bold text-slate-600 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Tableau", "Scikit-learn"].map(t => (
                       <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
@@ -260,13 +258,13 @@ const Resume = () => {
             {/* Patents Section */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <FileCheck className="w-4 h-4 mr-2 text-blue-600" /> Patents
+                <FileCheck className="w-4 h-4 mr-2 text-slate-700" /> Patents
               </h2>
               <div className="space-y-2">
                 {patents.map((item, i) => (
-                  <div key={i} className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                  <div key={i} className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition-colors">
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200/80">
+                      <span className="text-[10px] font-bold bg-slate-200 text-slate-800 px-2 py-0.5 rounded border border-slate-300/80">
                         {item.type}
                       </span>
                       <span className="text-[11px] text-slate-500 font-medium">{item.year}</span>
@@ -295,37 +293,34 @@ const Resume = () => {
                   return (
                     <div key={idx} className="relative">
                       
-                      {/* 1. 現任經歷 (Taipei Fubon Bank): 藍紫微漸層 + 藍實線 Accent */}
+                      {/* 1. 現任經歷 (Taipei Fubon Bank): 沉穩鈦灰黑主管卡片 (突出重要性且避開亮藍) */}
                       {isLatest && (
-                        <div className="bg-gradient-to-br from-blue-50/90 via-indigo-50/30 to-white p-6 md:p-7 rounded-xl border-2 border-blue-600/80 shadow-md">
+                        <div className="bg-slate-900 text-slate-100 p-6 md:p-7 rounded-xl border border-slate-800 shadow-xl">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                             <div className="min-w-0 flex-1">
                               <div className="flex items-center gap-2">
-                                <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight">{exp.company}</h3>
-                                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shrink-0">CURRENT</span>
+                                <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{exp.company}</h3>
+                                <span className="bg-slate-800 text-slate-200 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-700 tracking-wide shrink-0">CURRENT</span>
                               </div>
                               
-                              {/* 避免職稱自動換行：whitespace-nowrap + overflow-x-auto */}
-                              <div className="overflow-x-auto no-scrollbar max-w-full">
-                                <p className="text-blue-800 font-bold text-sm md:text-base mt-0.5 whitespace-nowrap">
-                                  {exp.role}
-                                </p>
-                              </div>
+                              <p className="text-slate-300 font-bold text-xs sm:text-sm md:text-base mt-1">
+                                {exp.role}
+                              </p>
 
-                              <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
+                              <p className="text-xs text-slate-400 font-medium mt-0.5">{exp.size}</p>
                             </div>
                             
-                            <div className="px-2.5 py-1 bg-white text-blue-700 text-xs font-bold flex items-center whitespace-nowrap shrink-0 border border-blue-200 shadow-sm">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-blue-600" /> {exp.period}
+                            <div className="px-2.5 py-1 bg-slate-800 text-slate-200 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-700 shadow-sm">
+                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-400" /> {exp.period}
                             </div>
                           </div>
 
-                          <p className="text-slate-800 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
+                          <p className="text-slate-300 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
                           
                           <ul className="space-y-2 mb-5">
                             {exp.details.map((detail, dIdx) => (
-                              <li key={dIdx} className="flex text-xs md:text-sm text-slate-700 leading-relaxed">
-                                <ChevronRight className="w-3.5 h-3.5 text-blue-600 mr-1.5 shrink-0 mt-0.5" />
+                              <li key={dIdx} className="flex text-xs md:text-sm text-slate-300 leading-relaxed">
+                                <ChevronRight className="w-3.5 h-3.5 text-slate-400 mr-1.5 shrink-0 mt-0.5" />
                                 <span>{detail}</span>
                               </li>
                             ))}
@@ -334,11 +329,11 @@ const Resume = () => {
                           {exp.projects && (
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-5">
                               {exp.projects.map((proj, pIdx) => (
-                                <div key={pIdx} className="bg-white/80 p-3 rounded-lg border border-blue-100 shadow-sm">
-                                  <p className="font-bold text-blue-900 text-xs flex items-center">
-                                    <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-blue-600" /> {proj.name}
+                                <div key={pIdx} className="bg-slate-800/80 p-3 rounded-lg border border-slate-700/80 shadow-sm">
+                                  <p className="font-bold text-slate-200 text-xs flex items-center">
+                                    <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-slate-400" /> {proj.name}
                                   </p>
-                                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">{proj.desc}</p>
+                                  <p className="text-xs text-slate-300 mt-1 leading-relaxed">{proj.desc}</p>
                                 </div>
                               ))}
                             </div>
@@ -346,7 +341,7 @@ const Resume = () => {
 
                           <div className="flex flex-wrap gap-1.5">
                             {exp.tags.map(tag => (
-                              <span key={tag} className="text-[10px] bg-blue-100/70 text-blue-800 px-2 py-0.5 rounded font-mono font-semibold uppercase tracking-wider border border-blue-200">
+                              <span key={tag} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-700">
                                 #{tag}
                               </span>
                             ))}
@@ -354,19 +349,16 @@ const Resume = () => {
                         </div>
                       )}
 
-                      {/* 2. 第二階段經歷 (Deloitte): 白底 + 鋼灰 Accent 邊條 */}
+                      {/* 2. 第二階段經歷 (Deloitte): 清爽白底 + 鋼灰側條 */}
                       {isSecond && (
                         <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 border-l-4 border-l-slate-600 shadow-sm">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                             <div className="min-w-0 flex-1">
                               <h3 className="text-xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
                               
-                              {/* 避免職稱自動換行 */}
-                              <div className="overflow-x-auto no-scrollbar max-w-full">
-                                <p className="text-slate-800 font-semibold text-sm mt-0.5 whitespace-nowrap">
-                                  {exp.role}
-                                </p>
-                              </div>
+                              <p className="text-slate-800 font-semibold text-xs sm:text-sm mt-0.5">
+                                {exp.role}
+                              </p>
 
                               <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
                             </div>
@@ -397,19 +389,16 @@ const Resume = () => {
                         </div>
                       )}
 
-                      {/* 3. 早期經歷 (KPMG): 微灰輕柔底色 + 淺灰邊條 */}
+                      {/* 3. 早期經歷 (KPMG): 微灰底色 + 淺灰側條 */}
                       {!isLatest && !isSecond && (
                         <div className="bg-slate-50/80 p-5 md:p-6 rounded-xl border border-slate-200/80 border-l-4 border-l-slate-400">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
                             <div className="min-w-0 flex-1">
                               <h3 className="text-lg font-bold text-slate-800 tracking-tight">{exp.company}</h3>
                               
-                              {/* 避免職稱自動換行 */}
-                              <div className="overflow-x-auto no-scrollbar max-w-full">
-                                <p className="text-slate-700 font-semibold text-xs md:text-sm mt-0.5 whitespace-nowrap">
-                                  {exp.role}
-                                </p>
-                              </div>
+                              <p className="text-slate-700 font-semibold text-xs sm:text-sm mt-0.5">
+                                {exp.role}
+                              </p>
 
                               <p className="text-[11px] text-slate-500 font-medium mt-0.5">{exp.size}</p>
                             </div>
