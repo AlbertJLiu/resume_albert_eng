@@ -64,7 +64,7 @@ const Resume = () => {
     }
   ];
 
-  // Work Experience Data (縮短職稱文字防尷尬換行)
+  // Work Experience Data
   const experiences = [
     {
       company: "Taipei Fubon Bank",
@@ -118,25 +118,25 @@ const Resume = () => {
     }
   ];
   
-  // Icon 採用低調沉穩的深鋼灰色 (slate-700)
+  // Icon 採用範本高階鋼藍色 (#1e385c)
   const certificates = [
-    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-slate-700" /> },
-    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-slate-700" /> },
-    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-slate-700" /> },
-    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-slate-700" /> },
-    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-slate-700" /> },
-    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-slate-700" /> },
-    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-slate-700" /> },
-    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-slate-700" /> },
-    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-slate-700" /> }
+    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-[#1e385c]" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-100/90 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
+    <div className="min-h-screen bg-slate-100/90 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-[#13293d] selection:text-white">
       <div className="max-w-5xl mx-auto">
         
-        {/* 個人資料 Header: 高階深色 Banner */}
-        <header className="bg-slate-900 text-slate-100 rounded-2xl shadow-xl p-6 md:p-10 mb-8 border border-slate-800">
+        {/* 個人資料 Header: 採用範本深海藍 (#13293d) */}
+        <header className="bg-[#13293d] text-slate-100 rounded-2xl shadow-xl p-6 md:p-10 mb-8 border border-slate-800">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             {/* Profile Image Container */}
             <div className="relative shrink-0">
@@ -155,8 +155,8 @@ const Resume = () => {
               <div className="mb-3">
                 <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">Albert Liu</h1>
                 
-                {/* 縮小字體並適度精簡文字，確保不尷尬斷行 */}
-                <p className="text-xs sm:text-sm text-slate-300 font-semibold tracking-tight mt-1 leading-normal">
+                {/* 彈性字級與精簡文字，防自動斷行 */}
+                <p className="text-xs sm:text-sm md:text-base text-slate-300 font-semibold tracking-tight mt-1 leading-normal">
                   Data Science Section Manager | Data Analytics | AI Governance | PM & Strategy
                 </p>
               </div>
@@ -179,7 +179,7 @@ const Resume = () => {
               {/* 核心技能 Badge */}
               <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
                 {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
-                  <span key={skill} className="bg-slate-800 text-slate-200 border border-slate-700 px-3 py-1 rounded text-xs font-mono font-medium tracking-wide">
+                  <span key={skill} className="bg-[#1e385c] text-slate-100 border border-slate-700 px-3 py-1 rounded text-xs font-mono font-medium tracking-wide">
                     {skill}
                   </span>
                 ))}
@@ -191,18 +191,18 @@ const Resume = () => {
         {/* 雙欄架構 (1/3 左側欄 + 2/3 右側欄) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* 左側欄位 (1/3 寬度): 柔和淺灰底卡片 + 深鋼灰 Icon */}
+          {/* 左側欄位 (1/3 寬度): 採用範本冰藍輕灰底 (#f0f4f8) + 鋼藍 Icon (#1e385c) */}
           <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <GraduationCap className="w-4 h-4 mr-2 text-slate-700" /> Education
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-200 pb-2">
+                <GraduationCap className="w-4 h-4 mr-2 text-[#1e385c]" /> Education
               </h2>
               <div className="space-y-2.5">
                 {education.map((edu, i) => (
-                  <div key={i} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/90 shadow-sm hover:border-slate-300 transition-colors">
-                    <p className="text-[11px] font-bold text-slate-500 mb-0.5">{edu.period}</p>
+                  <div key={i} className="p-3.5 rounded-xl border border-[#d0dbe5] bg-[#f0f4f8] shadow-sm hover:border-[#1e385c]/40 transition-colors">
+                    <p className="text-[11px] font-bold text-[#1e385c] mb-0.5">{edu.period}</p>
                     <h3 className="font-bold text-slate-900 text-xs md:text-sm">{edu.school}</h3>
                     <p className="text-xs text-slate-600 mt-0.5">{edu.degree}</p>
                   </div>
@@ -212,18 +212,18 @@ const Resume = () => {
 
             {/* Certifications */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <Award className="w-4 h-4 mr-2 text-slate-700" /> Certifications
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Award className="w-4 h-4 mr-2 text-[#1e385c]" /> Certifications
               </h2>
               <div className="space-y-2">
                 {certificates.map((cert, i) => (
-                  <div key={i} className="flex items-center p-2.5 bg-slate-50/90 rounded-lg border border-slate-200 shadow-sm hover:border-slate-300 transition-colors">
+                  <div key={i} className="flex items-center p-2.5 bg-[#f0f4f8] rounded-lg border border-[#d0dbe5] shadow-sm hover:border-[#1e385c]/40 transition-colors">
                     {cert.icon}
                     <span className="ml-2.5 text-xs font-semibold text-slate-800">{cert.title}</span>
                   </div>
                 ))}
-                <div className="p-3 bg-slate-200/50 rounded-lg border border-slate-300/60">
-                  <p className="text-[10px] text-slate-600 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
+                <div className="p-3 bg-[#e2ebf3] rounded-lg border border-[#d0dbe5]">
+                  <p className="text-[10px] text-[#1e385c] font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
                   <p className="text-xs text-slate-700 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
                 </div>
               </div>
@@ -231,24 +231,24 @@ const Resume = () => {
 
             {/* Technical Tools */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <Code2 className="w-4 h-4 mr-2 text-slate-700" /> Technical Tools
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Code2 className="w-4 h-4 mr-2 text-[#1e385c]" /> Technical Tools
               </h2>
-              <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200 shadow-sm space-y-3.5">
+              <div className="bg-[#f0f4f8] p-4 rounded-xl border border-[#d0dbe5] shadow-sm space-y-3.5">
                 <div>
-                  <p className="text-[10px] font-bold text-slate-600 uppercase mb-2 tracking-wider">Programming & DB</p>
+                  <p className="text-[10px] font-bold text-[#1e385c] uppercase mb-2 tracking-wider">Programming & DB</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-[#d0dbe5] rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
-                <hr className="border-slate-200/60" />
+                <hr className="border-[#d0dbe5]" />
                 <div>
-                  <p className="text-[10px] font-bold text-slate-600 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
+                  <p className="text-[10px] font-bold text-[#1e385c] uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Tableau", "Scikit-learn"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-[#d0dbe5] rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -257,14 +257,14 @@ const Resume = () => {
 
             {/* Patents Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <FileCheck className="w-4 h-4 mr-2 text-slate-700" /> Patents
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-200 pb-2">
+                <FileCheck className="w-4 h-4 mr-2 text-[#1e385c]" /> Patents
               </h2>
               <div className="space-y-2">
                 {patents.map((item, i) => (
-                  <div key={i} className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition-colors">
+                  <div key={i} className="bg-[#f0f4f8] p-3.5 rounded-xl border border-[#d0dbe5] shadow-sm hover:border-[#1e385c]/40 transition-colors">
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-bold bg-slate-200 text-slate-800 px-2 py-0.5 rounded border border-slate-300/80">
+                      <span className="text-[10px] font-bold bg-[#e2ebf3] text-[#1e385c] px-2 py-0.5 rounded border border-[#c1d1e0]">
                         {item.type}
                       </span>
                       <span className="text-[11px] text-slate-500 font-medium">{item.year}</span>
@@ -283,7 +283,7 @@ const Resume = () => {
             {/* Work Experience */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-5 flex items-center border-b border-slate-200 pb-2">
-                <Briefcase className="w-4 h-4 mr-2 text-slate-800" /> Work Experience
+                <Briefcase className="w-4 h-4 mr-2 text-[#1e385c]" /> Work Experience
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, idx) => {
@@ -293,14 +293,14 @@ const Resume = () => {
                   return (
                     <div key={idx} className="relative">
                       
-                      {/* 1. 現任經歷 (Taipei Fubon Bank): 沉穩鈦灰黑主管卡片 (突出重要性且避開亮藍) */}
+                      {/* 1. 現任經歷 (Taipei Fubon Bank): 沉穩深海藍範本卡片 (#13293d) */}
                       {isLatest && (
-                        <div className="bg-slate-900 text-slate-100 p-6 md:p-7 rounded-xl border border-slate-800 shadow-xl">
+                        <div className="bg-[#13293d] text-slate-100 p-6 md:p-7 rounded-xl border border-slate-800 shadow-xl">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                             <div className="min-w-0 flex-1">
                               <div className="flex items-center gap-2">
                                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{exp.company}</h3>
-                                <span className="bg-slate-800 text-slate-200 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-700 tracking-wide shrink-0">CURRENT</span>
+                                <span className="bg-[#1e385c] text-slate-100 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-600 tracking-wide shrink-0">CURRENT</span>
                               </div>
                               
                               <p className="text-slate-300 font-bold text-xs sm:text-sm md:text-base mt-1">
@@ -310,8 +310,8 @@ const Resume = () => {
                               <p className="text-xs text-slate-400 font-medium mt-0.5">{exp.size}</p>
                             </div>
                             
-                            <div className="px-2.5 py-1 bg-slate-800 text-slate-200 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-700 shadow-sm">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-400" /> {exp.period}
+                            <div className="px-2.5 py-1 bg-slate-800/90 text-slate-200 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-700 shadow-sm">
+                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-300" /> {exp.period}
                             </div>
                           </div>
 
@@ -349,9 +349,9 @@ const Resume = () => {
                         </div>
                       )}
 
-                      {/* 2. 第二階段經歷 (Deloitte): 清爽白底 + 鋼灰側條 */}
+                      {/* 2. 第二階段經歷 (Deloitte): 白底 + 鋼藍 Accent 邊條 (#1e385c) */}
                       {isSecond && (
-                        <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 border-l-4 border-l-slate-600 shadow-sm">
+                        <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 border-l-4 border-l-[#1e385c] shadow-sm">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                             <div className="min-w-0 flex-1">
                               <h3 className="text-xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
@@ -363,8 +363,8 @@ const Resume = () => {
                               <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
                             </div>
                             
-                            <div className="px-2.5 py-1 bg-slate-100 rounded text-slate-700 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-200">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-600" /> {exp.period}
+                            <div className="px-2.5 py-1 bg-[#f0f4f8] rounded text-[#1e385c] text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-[#d0dbe5]">
+                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-[#1e385c]" /> {exp.period}
                             </div>
                           </div>
 
@@ -389,7 +389,7 @@ const Resume = () => {
                         </div>
                       )}
 
-                      {/* 3. 早期經歷 (KPMG): 微灰底色 + 淺灰側條 */}
+                      {/* 3. 早期經歷 (KPMG): 微灰底色 + 淺灰邊條 */}
                       {!isLatest && !isSecond && (
                         <div className="bg-slate-50/80 p-5 md:p-6 rounded-xl border border-slate-200/80 border-l-4 border-l-slate-400">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
