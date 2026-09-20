@@ -118,31 +118,29 @@ const Resume = () => {
     }
   ];
   
-  // 側欄彩色 Icon (天藍色調)
+  // 證照 Icon 統一採用高質感藍色
   const certificates = [
-    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-sky-400" /> },
-    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-sky-400" /> },
-    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-sky-400" /> },
-    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-sky-400" /> },
-    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-sky-400" /> },
-    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-400" /> },
-    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-sky-400" /> },
-    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-sky-400" /> },
-    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-sky-400" /> }
+    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-blue-600" /> },
+    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-blue-600" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-blue-600" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-blue-600" /> },
+    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-blue-600" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-blue-600" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-blue-600" /> },
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-blue-600" /> },
+    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-blue-600" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-100/90 py-10 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
-      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-slate-200">
+    <div className="min-h-screen bg-slate-100/90 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
+      <div className="max-w-5xl mx-auto">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-          
-          {/* 左側深色定錨 Side Column (占 4 欄) */}
-          <div className="lg:col-span-4 bg-[#0f172a] text-slate-100 p-6 md:p-8 space-y-8 border-r border-slate-800">
-            
-            {/* 照片與個人聯絡資訊 */}
-            <div className="text-center lg:text-left">
-              <div className="w-36 h-36 md:w-40 md:h-40 mx-auto lg:mx-0 rounded-xl overflow-hidden border-2 border-slate-700 shadow-lg mb-6">
+        {/* 個人資料 Header: 深色高階 Banner */}
+        <header className="bg-slate-900 text-slate-100 rounded-2xl shadow-xl p-6 md:p-10 mb-8 border border-slate-800">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            {/* Profile Image Container */}
+            <div className="relative shrink-0">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden border-2 border-slate-700 shadow-lg">
                 <img 
                   src="/profile.jpg" 
                   alt="Albert Profile" 
@@ -150,34 +148,65 @@ const Resume = () => {
                   onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/200?text=Albert"; }}
                 />
               </div>
+            </div>
 
-              <div className="space-y-3 text-xs md:text-sm text-slate-300 font-medium border-b border-slate-800 pb-6">
-                <div className="flex items-center justify-center lg:justify-start">
-                  <Briefcase className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> 11~12 Years Experience
-                </div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <MapPin className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> Taipei City, Taiwan
-                </div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <Mail className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> albertliu141@gmail.com
-                </div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <ShieldCheck className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> CPA | PMP | IBM DS
+            {/* Basic Info */}
+            <div className="flex-1 text-center md:text-left min-w-0">
+              <div className="mb-3">
+                <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">Albert Liu</h1>
+                
+                {/* 避免自動換行：whitespace-nowrap + overflow-x-auto */}
+                <div className="overflow-x-auto no-scrollbar py-1">
+                  <p className="text-base md:text-lg text-slate-300 font-bold tracking-tight leading-snug whitespace-nowrap">
+                    Data Science Section Manager | Data Analytics | AI Governance | Strategic Planning | Project Management
+                  </p>
                 </div>
               </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5 text-xs md:text-sm text-slate-300 font-medium">
+                <div className="flex items-center justify-center md:justify-start">
+                  <Briefcase className="w-4 h-4 mr-2 text-slate-400 shrink-0" /> 11~12 Years of Experience
+                </div>
+                <div className="flex items-center justify-center md:justify-start">
+                  <MapPin className="w-4 h-4 mr-2 text-slate-400 shrink-0" /> Daan Dist., Taipei City, Taiwan
+                </div>
+                <div className="flex items-center justify-center md:justify-start">
+                  <Mail className="w-4 h-4 mr-2 text-slate-400 shrink-0" /> albertliu141@gmail.com
+                </div>
+                <div className="flex items-center justify-center md:justify-start">
+                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-400 shrink-0" /> CPA | PMP | IBM DS | AI Application Planner
+                </div>
+              </div>
+
+              {/* 核心技能 Badge */}
+              <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
+                {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
+                  <span key={skill} className="bg-slate-800 text-slate-200 border border-slate-700 px-3 py-1 rounded text-xs font-mono font-medium tracking-wide">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
+          </div>
+        </header>
+
+        {/* 原本的雙欄架構 (1/3 左側欄 + 2/3 右側欄) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* 左側欄位 (1/3 寬度): 方框採用 bg-slate-50/90 淺灰底，搭配藍色 Icon */}
+          <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-3 flex items-center border-b border-slate-800 pb-2">
-                <GraduationCap className="w-4 h-4 mr-2 text-sky-400" /> Education
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <GraduationCap className="w-4 h-4 mr-2 text-blue-600" /> Education
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {education.map((edu, i) => (
-                  <div key={i} className="p-3 rounded-lg bg-slate-900/90 border border-slate-800">
-                    <p className="text-[11px] font-bold text-sky-400 mb-0.5">{edu.period}</p>
-                    <h3 className="font-bold text-white text-xs md:text-sm">{edu.school}</h3>
-                    <p className="text-xs text-slate-300 mt-0.5">{edu.degree}</p>
+                  <div key={i} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/90 shadow-sm hover:border-blue-300 transition-colors">
+                    <p className="text-[11px] font-bold text-blue-600 mb-0.5">{edu.period}</p>
+                    <h3 className="font-bold text-slate-900 text-xs md:text-sm">{edu.school}</h3>
+                    <p className="text-xs text-slate-600 mt-0.5">{edu.degree}</p>
                   </div>
                 ))}
               </div>
@@ -185,39 +214,43 @@ const Resume = () => {
 
             {/* Certifications */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-3 flex items-center border-b border-slate-800 pb-2">
-                <Award className="w-4 h-4 mr-2 text-sky-400" /> Certifications
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Award className="w-4 h-4 mr-2 text-blue-600" /> Certifications
               </h2>
               <div className="space-y-2">
                 {certificates.map((cert, i) => (
-                  <div key={i} className="flex items-center p-2.5 bg-slate-900/90 rounded-lg border border-slate-800">
+                  <div key={i} className="flex items-center p-2.5 bg-slate-50/90 rounded-lg border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
                     {cert.icon}
-                    <span className="ml-2.5 text-xs font-semibold text-slate-200">{cert.title}</span>
+                    <span className="ml-2.5 text-xs font-semibold text-slate-800">{cert.title}</span>
                   </div>
                 ))}
+                <div className="p-3 bg-blue-50/40 rounded-lg border border-blue-200/60">
+                  <p className="text-[10px] text-blue-800 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
+                </div>
               </div>
             </section>
 
             {/* Technical Tools */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-3 flex items-center border-b border-slate-800 pb-2">
-                <Code2 className="w-4 h-4 mr-2 text-sky-400" /> Technical Tools
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Code2 className="w-4 h-4 mr-2 text-blue-600" /> Technical Tools
               </h2>
-              <div className="bg-slate-900/90 p-4 rounded-lg border border-slate-800 space-y-3">
+              <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200 shadow-sm space-y-3.5">
                 <div>
-                  <p className="text-[10px] font-bold text-sky-400 uppercase mb-2 tracking-wider">Programming & DB</p>
+                  <p className="text-[10px] font-bold text-blue-700 uppercase mb-2 tracking-wider">Programming & DB</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-slate-800 rounded text-xs font-mono font-medium text-slate-200">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
-                <hr className="border-slate-800" />
+                <hr className="border-slate-200/60" />
                 <div>
-                  <p className="text-[10px] font-bold text-sky-400 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
+                  <p className="text-[10px] font-bold text-blue-700 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Tableau", "Scikit-learn"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-slate-800 rounded text-xs font-mono font-medium text-slate-200">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-slate-200/80 rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -226,19 +259,19 @@ const Resume = () => {
 
             {/* Patents Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-3 flex items-center border-b border-slate-800 pb-2">
-                <FileCheck className="w-4 h-4 mr-2 text-sky-400" /> Patents
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <FileCheck className="w-4 h-4 mr-2 text-blue-600" /> Patents
               </h2>
               <div className="space-y-2">
                 {patents.map((item, i) => (
-                  <div key={i} className="bg-slate-900/90 p-3 rounded-lg border border-slate-800">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[10px] font-bold bg-sky-950 text-sky-300 px-2 py-0.5 rounded border border-sky-800">
+                  <div key={i} className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200/80">
                         {item.type}
                       </span>
-                      <span className="text-[11px] text-slate-400 font-mono">{item.year}</span>
+                      <span className="text-[11px] text-slate-500 font-medium">{item.year}</span>
                     </div>
-                    <h3 className="font-bold text-slate-100 text-xs leading-snug">{item.title}</h3>
+                    <h3 className="font-bold text-slate-900 text-xs leading-snug">{item.title}</h3>
                   </div>
                 ))}
               </div>
@@ -246,44 +279,13 @@ const Resume = () => {
 
           </div>
 
-          {/* 右側主內容 Main Column (占 8 欄) */}
-          <div className="lg:col-span-8 p-6 md:p-10 bg-white space-y-8">
+          {/* 右側欄位 (2/3 寬度): 工作經歷 */}
+          <div className="lg:col-span-2 space-y-8">
             
-            {/* Header: 姓名與不換行標題 */}
-            <header className="border-b border-slate-200 pb-6">
-              <h1 className="text-4xl font-black text-slate-900 tracking-tight">Albert Liu</h1>
-              
-              {/* 避免自動換行控制項：whitespace-nowrap + overflow-x-auto */}
-              <div className="overflow-x-auto no-scrollbar py-1">
-                <p className="text-sm md:text-base text-blue-700 font-bold tracking-tight whitespace-nowrap">
-                  Data Science Section Manager | Data Analytics | AI Governance | Strategic Planning | Project Management
-                </p>
-              </div>
-
-              {/* 關鍵 Skills 標籤 */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
-                  <span key={skill} className="bg-slate-900 text-white px-3 py-1 rounded text-xs font-semibold tracking-wide">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </header>
-
-            {/* Executive Profile Summary */}
-            <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <ShieldCheck className="w-4 h-4 mr-2 text-blue-600" /> Executive Profile
-              </h2>
-              <p className="text-xs md:text-sm text-slate-700 font-medium leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200/80">
-                Banking data science leader with 10+ years across financial services, risk consulting and audit. Combine AI governance and platform delivery with a background in law and accounting to translate regulatory requirements into model controls and business outcomes.
-              </p>
-            </section>
-
             {/* Work Experience */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-5 flex items-center border-b border-slate-200 pb-2">
-                <Briefcase className="w-4 h-4 mr-2 text-blue-600" /> Work Experience
+                <Briefcase className="w-4 h-4 mr-2 text-slate-800" /> Work Experience
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, idx) => {
@@ -293,17 +295,17 @@ const Resume = () => {
                   return (
                     <div key={idx} className="relative">
                       
-                      {/* 1. 現任經歷 (Taipei Fubon Bank): 微藍漸層 + 藍實線 Accent */}
+                      {/* 1. 現任經歷 (Taipei Fubon Bank): 藍紫微漸層 + 藍實線 Accent */}
                       {isLatest && (
-                        <div className="bg-gradient-to-br from-blue-50/80 via-indigo-50/20 to-white p-6 rounded-xl border-2 border-blue-600/80 shadow-md">
-                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
-                            <div>
+                        <div className="bg-gradient-to-br from-blue-50/90 via-indigo-50/30 to-white p-6 md:p-7 rounded-xl border-2 border-blue-600/80 shadow-md">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                            <div className="min-w-0 flex-1">
                               <div className="flex items-center gap-2">
                                 <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight">{exp.company}</h3>
-                                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide">CURRENT</span>
+                                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shrink-0">CURRENT</span>
                               </div>
                               
-                              {/* 防止職稱被自動換行：whitespace-nowrap + overflow-x-auto */}
+                              {/* 避免職稱自動換行：whitespace-nowrap + overflow-x-auto */}
                               <div className="overflow-x-auto no-scrollbar max-w-full">
                                 <p className="text-blue-800 font-bold text-sm md:text-base mt-0.5 whitespace-nowrap">
                                   {exp.role}
@@ -354,11 +356,12 @@ const Resume = () => {
 
                       {/* 2. 第二階段經歷 (Deloitte): 白底 + 鋼灰 Accent 邊條 */}
                       {isSecond && (
-                        <div className="bg-white p-6 rounded-xl border border-slate-200/90 border-l-4 border-l-slate-600 shadow-sm">
-                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
-                            <div>
+                        <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 border-l-4 border-l-slate-600 shadow-sm">
+                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                            <div className="min-w-0 flex-1">
                               <h3 className="text-xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
                               
+                              {/* 避免職稱自動換行 */}
                               <div className="overflow-x-auto no-scrollbar max-w-full">
                                 <p className="text-slate-800 font-semibold text-sm mt-0.5 whitespace-nowrap">
                                   {exp.role}
@@ -398,9 +401,10 @@ const Resume = () => {
                       {!isLatest && !isSecond && (
                         <div className="bg-slate-50/80 p-5 md:p-6 rounded-xl border border-slate-200/80 border-l-4 border-l-slate-400">
                           <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <h3 className="text-lg font-bold text-slate-800 tracking-tight">{exp.company}</h3>
                               
+                              {/* 避免職稱自動換行 */}
                               <div className="overflow-x-auto no-scrollbar max-w-full">
                                 <p className="text-slate-700 font-semibold text-xs md:text-sm mt-0.5 whitespace-nowrap">
                                   {exp.role}
@@ -446,7 +450,7 @@ const Resume = () => {
 
         </div>
 
-        <footer className="text-center text-slate-400 text-xs py-6 bg-slate-50 border-t border-slate-200">
+        <footer className="text-center text-slate-400 text-xs mt-16 pb-8">
           <p>© 2026 Albert - Professional Portfolio Profile</p>
         </footer>
       </div>
