@@ -34,7 +34,7 @@ const Resume = () => {
   const patents = [
     {
       title: "REAL-TIME LOAN NOTIFICATION SYSTEM",
-      year: "2026",
+      year: "2026(under review)",
     },
     {
       title: "FPERSONALIZED RANKING AND RECOMMENDATION SYSTEM",
@@ -42,11 +42,11 @@ const Resume = () => {
     },
     {
       title: "FEATURE STORE SYSTEM",
-      year: "2026",
+      year: "2026(under review)",
     },
     {
       title: "MODULAR MODELING SYSTEM",
-      year: "2026",
+      year: "2026(under review)",
     },
     {
       title: "CREDIT CARD MERCHANT NAME INTEGRATION SYSTEM",
