@@ -112,7 +112,6 @@ const Resume = () => {
     }
   ];
   
-  // 統一 Icon 顏色為沉穩的深藍灰，符合 McKinsey/顧問風
   const certificates = [
     { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-slate-700" /> },
     { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-slate-700" /> },
@@ -126,7 +125,6 @@ const Resume = () => {
   ];
 
   return (
-    // 使用經典的近白高階灰背景 (bg-slate-100/70)
     <div className="min-h-screen bg-slate-100/70 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-blue-900 selection:text-white">
       <div className="max-w-5xl mx-auto">
         
@@ -140,7 +138,7 @@ const Resume = () => {
                   src="/profile.jpg" 
                   alt="Albert Profile" 
                   className="w-full h-full object-cover"
-                  onError={(e) => { (e.target as HTMLImageElement).src = "https://via.placeholder.com/200?text=Albert"; }}
+                  onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/200?text=Albert"; }}
                 />
               </div>
             </div>
@@ -185,7 +183,7 @@ const Resume = () => {
           {/* Left Column: Education, Certs, Tools, Patents (1/3 Width) */}
           <div className="lg:col-span-1 space-y-8">
 
-            {/* Education (全數調整為一致的背景與邊框，無特殊異色) */}
+            {/* Education */}
             <section>
               <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center tracking-tight border-b border-slate-200 pb-2">
                 <GraduationCap className="w-5 h-5 mr-2 text-blue-950" /> Education
