@@ -118,17 +118,17 @@ const Resume = () => {
     }
   ];
   
-  // Certifications 點綴藍色調 Icon
+  // Certifications：Icon 顏色統一為沉穩鋼藍 (#1e385c)
   const certificates = [
-    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-blue-600" /> },
-    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-emerald-600" /> },
-    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-indigo-600" /> },
-    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-sky-600" /> },
-    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-cyan-600" /> },
-    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-blue-500" /> },
-    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-violet-600" /> },
+    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-[#1e385c]" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-[#1e385c]" /> },
     { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-[#1e385c]" /> },
-    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-teal-600" /> }
+    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-[#1e385c]" /> }
   ];
 
   return (
@@ -162,16 +162,16 @@ const Resume = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-5 text-xs md:text-sm text-slate-300 font-medium">
                 <div className="flex items-center justify-center md:justify-start">
-                  <Briefcase className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> 11~12 Years of Experience
+                  <Briefcase className="w-4 h-4 mr-2 text-slate-300 shrink-0" /> 11~12 Years of Experience
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <MapPin className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> Daan Dist., Taipei City, Taiwan
+                  <MapPin className="w-4 h-4 mr-2 text-slate-300 shrink-0" /> Daan Dist., Taipei City, Taiwan
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <Mail className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> albertliu141@gmail.com
+                  <Mail className="w-4 h-4 mr-2 text-slate-300 shrink-0" /> albertliu141@gmail.com
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <ShieldCheck className="w-4 h-4 mr-2 text-sky-400 shrink-0" /> CPA | PMP | IBM DS | AI Application Planner
+                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-300 shrink-0" /> CPA | PMP | IBM DS | AI Application Planner
                 </div>
               </div>
 
@@ -190,23 +190,20 @@ const Resume = () => {
         {/* 雙欄架構 (1/3 左欄 + 2/3 右欄) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* 左側欄位 (1/3 寬度) */}
+          {/* 左側欄位 (1/3 寬度): 使用加深顯眼的經典灰藍色 (#e8f0f8)，明確與背景拉開對比 */}
           <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center mr-2 shrink-0">
-                  <GraduationCap className="w-3.5 h-3.5 text-blue-600" />
-                </div>
-                Education
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-300 pb-2">
+                <GraduationCap className="w-4 h-4 mr-2 text-[#1e385c]" /> Education
               </h2>
               <div className="space-y-2.5">
                 {education.map((edu, i) => (
-                  <div key={i} className="p-3.5 rounded-xl border border-[#d0dbe5] bg-[#f0f4f8] shadow-sm hover:border-[#1e385c]/40 transition-colors">
+                  <div key={i} className="p-3.5 rounded-xl border border-[#b8cde0] bg-[#e8f0f8] shadow-sm hover:border-[#1e385c]/60 transition-colors">
                     <p className="text-[11px] font-bold text-[#1e385c] mb-0.5">{edu.period}</p>
                     <h3 className="font-bold text-slate-900 text-xs md:text-sm">{edu.school}</h3>
-                    <p className="text-xs text-slate-600 mt-0.5">{edu.degree}</p>
+                    <p className="text-xs text-slate-700 mt-0.5">{edu.degree}</p>
                   </div>
                 ))}
               </div>
@@ -214,22 +211,19 @@ const Resume = () => {
 
             {/* Certifications */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center mr-2 shrink-0">
-                  <Award className="w-3.5 h-3.5 text-blue-600" />
-                </div>
-                Certifications
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-300 pb-2">
+                <Award className="w-4 h-4 mr-2 text-[#1e385c]" /> Certifications
               </h2>
               <div className="space-y-2">
                 {certificates.map((cert, i) => (
-                  <div key={i} className="flex items-center p-2.5 bg-[#f0f4f8] rounded-lg border border-[#d0dbe5] shadow-sm hover:border-[#1e385c]/40 transition-colors">
-                    <div className="w-7 h-7 rounded-md bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2.5 shadow-2xs">
+                  <div key={i} className="flex items-center p-2.5 bg-[#e8f0f8] rounded-lg border border-[#b8cde0] shadow-sm hover:border-[#1e385c]/60 transition-colors">
+                    <div className="w-6 h-6 rounded bg-white border border-[#c1d3e3] flex items-center justify-center shrink-0 mr-2.5">
                       {cert.icon}
                     </div>
                     <span className="text-xs font-semibold text-slate-800">{cert.title}</span>
                   </div>
                 ))}
-                <div className="p-3 bg-[#e2ebf3] rounded-lg border border-[#d0dbe5]">
+                <div className="p-3 bg-[#d8e6f3] rounded-lg border border-[#b8cde0]">
                   <p className="text-[10px] text-[#1e385c] font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
                   <p className="text-xs text-slate-700 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
                 </div>
@@ -238,27 +232,24 @@ const Resume = () => {
 
             {/* Technical Tools */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center mr-2 shrink-0">
-                  <Code2 className="w-3.5 h-3.5 text-blue-600" />
-                </div>
-                Technical Tools
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-300 pb-2">
+                <Code2 className="w-4 h-4 mr-2 text-[#1e385c]" /> Technical Tools
               </h2>
-              <div className="bg-[#f0f4f8] p-4 rounded-xl border border-[#d0dbe5] shadow-sm space-y-3.5">
+              <div className="bg-[#e8f0f8] p-4 rounded-xl border border-[#b8cde0] shadow-sm space-y-3.5">
                 <div>
                   <p className="text-[10px] font-bold text-[#1e385c] uppercase mb-2 tracking-wider">Programming & DB</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-white border border-[#d0dbe5] rounded text-xs font-medium text-slate-700">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-[#b8cde0] rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
-                <hr className="border-[#d0dbe5]" />
+                <hr className="border-[#b8cde0]" />
                 <div>
                   <p className="text-[10px] font-bold text-[#1e385c] uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Tableau", "Scikit-learn"].map(t => (
-                      <span key={t} className="px-2 py-0.5 bg-white border border-[#d0dbe5] rounded text-xs font-medium text-slate-700">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-white border border-[#b8cde0] rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -267,20 +258,17 @@ const Resume = () => {
 
             {/* Patents Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3 flex items-center border-b border-slate-200 pb-2">
-                <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center mr-2 shrink-0">
-                  <FileCheck className="w-3.5 h-3.5 text-blue-600" />
-                </div>
-                Patents
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#1e385c] mb-3 flex items-center border-b border-slate-300 pb-2">
+                <FileCheck className="w-4 h-4 mr-2 text-[#1e385c]" /> Patents
               </h2>
               <div className="space-y-2">
                 {patents.map((item, i) => (
-                  <div key={i} className="bg-[#f0f4f8] p-3.5 rounded-xl border border-[#d0dbe5] shadow-sm hover:border-[#1e385c]/40 transition-colors">
+                  <div key={i} className="bg-[#e8f0f8] p-3.5 rounded-xl border border-[#b8cde0] shadow-sm hover:border-[#1e385c]/60 transition-colors">
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] font-bold bg-white text-[#1e385c] px-2 py-0.5 rounded border border-[#c1d1e0]">
+                      <span className="text-[10px] font-bold bg-white text-[#1e385c] px-2 py-0.5 rounded border border-[#b8cde0]">
                         {item.type}
                       </span>
-                      <span className="text-[11px] text-slate-500 font-medium">{item.year}</span>
+                      <span className="text-[11px] text-slate-600 font-medium">{item.year}</span>
                     </div>
                     <h3 className="font-bold text-slate-900 text-xs leading-snug">{item.title}</h3>
                   </div>
@@ -290,24 +278,30 @@ const Resume = () => {
 
           </div>
 
-          {/* 右側欄位 (2/3 寬度): 統一的典雅白底與鋼藍色系卡片 */}
+          {/* 右側欄位 (2/3 寬度): 具漸層層次感的工作經歷卡片 */}
           <div className="lg:col-span-2 space-y-8">
             
             {/* Work Experience */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-5 flex items-center border-b border-slate-200 pb-2">
-                <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center mr-2 shrink-0">
-                  <Briefcase className="w-3.5 h-3.5 text-blue-600" />
-                </div>
-                Work Experience
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-5 flex items-center border-b border-slate-200 pb-2">
+                <Briefcase className="w-4 h-4 mr-2 text-[#1e385c]" /> Work Experience
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, idx) => {
                   const isLatest = idx === 0;
+                  const isSecond = idx === 1;
 
                   return (
-                    <div key={idx} className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 shadow-sm hover:border-slate-300 transition-colors">
-                      
+                    <div 
+                      key={idx} 
+                      className={`p-6 md:p-7 rounded-xl border shadow-sm transition-all ${
+                        isLatest 
+                          ? 'bg-white border-slate-200 border-l-4 border-l-[#1e385c] shadow-md' // 1. 最新經歷：純白底 + 鋼藍粗邊條 (最亮眼)
+                          : isSecond 
+                            ? 'bg-slate-50/90 border-slate-200/90 border-l-4 border-l-slate-400' // 2. 次要經歷：薄灰底 + 中灰邊條 (中等)
+                            : 'bg-slate-100/60 border-slate-200/60 border-l-4 border-l-slate-300' // 3. 早期經歷：微淡灰底 + 淺灰邊條 (最淡)
+                      }`}
+                    >
                       <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center gap-2">
@@ -326,8 +320,8 @@ const Resume = () => {
                           <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
                         </div>
                         
-                        <div className="px-3 py-1 bg-[#f0f4f8] text-[#1e385c] rounded-md text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-[#d0dbe5]">
-                          <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-blue-600" /> {exp.period}
+                        <div className="px-3 py-1 bg-[#e8f0f8] text-[#1e385c] rounded-md text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-[#b8cde0]">
+                          <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-[#1e385c]" /> {exp.period}
                         </div>
                       </div>
 
@@ -336,7 +330,7 @@ const Resume = () => {
                       <ul className="space-y-2 mb-5">
                         {exp.details.map((detail, dIdx) => (
                           <li key={dIdx} className="flex text-xs md:text-sm text-slate-600 leading-relaxed">
-                            <ChevronRight className="w-3.5 h-3.5 text-blue-600 mr-1.5 shrink-0 mt-0.5" />
+                            <ChevronRight className="w-3.5 h-3.5 text-[#1e385c] mr-1.5 shrink-0 mt-0.5" />
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -345,11 +339,11 @@ const Resume = () => {
                       {exp.projects && (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-5">
                           {exp.projects.map((proj, pIdx) => (
-                            <div key={pIdx} className="bg-[#f0f4f8] p-3 rounded-lg border border-[#d0dbe5] shadow-xs">
+                            <div key={pIdx} className="bg-[#e8f0f8] p-3 rounded-lg border border-[#b8cde0] shadow-xs">
                               <p className="font-bold text-[#1e385c] text-xs flex items-center">
-                                <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-blue-600" /> {proj.name}
+                                <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-[#1e385c]" /> {proj.name}
                               </p>
-                              <p className="text-xs text-slate-600 mt-1 leading-relaxed">{proj.desc}</p>
+                              <p className="text-xs text-slate-700 mt-1 leading-relaxed">{proj.desc}</p>
                             </div>
                           ))}
                         </div>
@@ -357,7 +351,7 @@ const Resume = () => {
 
                       <div className="flex flex-wrap gap-1.5">
                         {exp.tags.map(tag => (
-                          <span key={tag} className="text-[10px] bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200">
+                          <span key={tag} className="text-[10px] bg-white text-slate-700 px-2.5 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200">
                             #{tag}
                           </span>
                         ))}
