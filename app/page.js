@@ -134,12 +134,12 @@ const Resume = () => {
     <div className="min-h-screen bg-slate-100/90 py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
       <div className="max-w-5xl mx-auto">
         
-        {/* Header Section */}
-        <header className="bg-white rounded-2xl shadow-sm p-6 md:p-10 mb-8 border border-slate-200/80">
+        {/* 個人資料 Header: 加入高階深色背景 (Executive Navy/Slate Banner) */}
+        <header className="bg-slate-900 text-slate-100 rounded-2xl shadow-xl p-6 md:p-10 mb-8 border border-slate-800">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             {/* Profile Image Container */}
             <div className="relative shrink-0">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden border-2 border-slate-700 shadow-lg">
                 <img 
                   src="/profile.jpg" 
                   alt="Albert Profile" 
@@ -152,31 +152,31 @@ const Resume = () => {
             {/* Basic Info */}
             <div className="flex-1 text-center md:text-left">
               <div className="mb-3">
-                <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Albert Liu</h1>
-                <p className="text-base md:text-lg text-slate-800 font-bold mt-1.5 tracking-tight leading-snug">
+                <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">Albert Liu</h1>
+                <p className="text-base md:text-lg text-slate-300 font-bold mt-1.5 tracking-tight leading-snug">
                   Data Science Section Manager | Data Analytics | AI Governance | Strategic Planning | Project Management
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5 text-xs md:text-sm text-slate-600 font-medium">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5 text-xs md:text-sm text-slate-300 font-medium">
                 <div className="flex items-center justify-center md:justify-start">
-                  <Briefcase className="w-4 h-4 mr-2 text-slate-700" /> 11~12 Years of Experience
+                  <Briefcase className="w-4 h-4 mr-2 text-slate-400" /> 11~12 Years of Experience
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <MapPin className="w-4 h-4 mr-2 text-slate-700" /> Daan Dist., Taipei City, Taiwan
+                  <MapPin className="w-4 h-4 mr-2 text-slate-400" /> Daan Dist., Taipei City, Taiwan
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <Mail className="w-4 h-4 mr-2 text-slate-700" /> albertliu141@gmail.com
+                  <Mail className="w-4 h-4 mr-2 text-slate-400" /> albertliu141@gmail.com
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-700" /> CPA | PMP | IBM DS | AI Application Planner
+                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-400" /> CPA | PMP | IBM DS | AI Application Planner
                 </div>
               </div>
 
               {/* 核心技能 Badge */}
               <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
                 {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
-                  <span key={skill} className="bg-slate-900 text-slate-100 px-3 py-1 rounded text-xs font-medium tracking-wide">
+                  <span key={skill} className="bg-slate-800 text-slate-200 border border-slate-700 px-3 py-1 rounded text-xs font-mono font-medium tracking-wide">
                     {skill}
                   </span>
                 ))}
@@ -187,7 +187,7 @@ const Resume = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* 左側欄位：Education, Certs, Tools, Patents 統一為高階極簡白底風格 */}
+          {/* 左側欄位：Education, Certs, Tools, Patents 100% 統一白底風格 */}
           <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
@@ -251,7 +251,7 @@ const Resume = () => {
               </div>
             </section>
 
-            {/* Patents Section (左側統一白底卡片風格) */}
+            {/* Patents Section (左側統一風格白底卡片) */}
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
                 <FileCheck className="w-4 h-4 mr-2 text-slate-800" /> Patents
@@ -273,7 +273,7 @@ const Resume = () => {
 
           </div>
 
-          {/* 右側欄位：工作經歷（時序階層化 Color Hierarchy） */}
+          {/* 右側欄位：工作經歷（全數採用清晰白底卡片 + 平滑側條階層） */}
           <div className="lg:col-span-2 space-y-8">
             
             {/* Work Experience */}
@@ -283,135 +283,69 @@ const Resume = () => {
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, idx) => {
-                  // 時序階層控制：最重要/最新的經歷為深色高對比，其餘為次要與早期風格
+                  // 時序細微階層樣式設定 (差別主要在於左側側邊條顏色與 Badge)
                   const isLatest = idx === 0;
                   const isSecond = idx === 1;
 
+                  // 邊框顏色漸層：現任(深黑 border-l-slate-900) -> 諮詢(中灰 border-l-slate-600) -> 早期(淺灰 border-l-slate-400)
+                  const borderAccent = isLatest 
+                    ? "border-l-4 border-l-slate-900" 
+                    : isSecond 
+                    ? "border-l-4 border-l-slate-600" 
+                    : "border-l-4 border-l-slate-400";
+
                   return (
                     <div key={idx} className="relative">
-                      {/* 1. 現任主管經歷 (Taipei Fubon Bank): 沉穩深藏青 Hero 卡片 */}
-                      {isLatest && (
-                        <div className="bg-slate-900 text-white p-6 md:p-8 rounded-xl border border-slate-800 border-l-4 border-l-sky-400 shadow-xl">
-                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
-                            <div>
-                              <div className="flex items-center gap-2">
-                                <h3 className="text-2xl font-extrabold text-white tracking-tight">{exp.company}</h3>
-                                <span className="bg-sky-500/20 text-sky-300 text-[10px] font-bold px-2 py-0.5 rounded border border-sky-400/30">CURRENT</span>
+                      <div className={`bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 ${borderAccent} shadow-sm`}>
+                        <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
+                              {isLatest && (
+                                <span className="bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide">PRESENT</span>
+                              )}
+                            </div>
+                            <p className="text-slate-800 font-semibold text-sm md:text-base mt-0.5">{exp.role}</p>
+                            <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
+                          </div>
+                          
+                          <div className="px-2.5 py-1 bg-slate-100 rounded text-slate-700 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-200/80">
+                            <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-600" /> {exp.period}
+                          </div>
+                        </div>
+
+                        <p className="text-slate-700 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
+                        
+                        <ul className="space-y-2 mb-5">
+                          {exp.details.map((detail, dIdx) => (
+                            <li key={dIdx} className="flex text-xs md:text-sm text-slate-600 leading-relaxed">
+                              <ChevronRight className="w-3.5 h-3.5 text-slate-400 mr-1.5 shrink-0 mt-0.5" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {exp.projects && (
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-5">
+                            {exp.projects.map((proj, pIdx) => (
+                              <div key={pIdx} className="bg-slate-50 p-3 rounded-lg border border-slate-200/80">
+                                <p className="font-bold text-slate-900 text-xs flex items-center">
+                                  <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-slate-700" /> {proj.name}
+                                </p>
+                                <p className="text-xs text-slate-600 mt-1 leading-relaxed">{proj.desc}</p>
                               </div>
-                              <p className="text-sky-300 font-bold text-base mt-1">{exp.role}</p>
-                              <p className="text-xs text-slate-400 font-medium mt-0.5">{exp.size}</p>
-                            </div>
-                            
-                            <div className="px-3 py-1 bg-slate-800/90 text-sky-200 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-700">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-sky-400" /> {exp.period}
-                            </div>
-                          </div>
-
-                          <p className="text-slate-300 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
-                          
-                          <ul className="space-y-2 mb-5">
-                            {exp.details.map((detail, dIdx) => (
-                              <li key={dIdx} className="flex text-xs md:text-sm text-slate-300 leading-relaxed">
-                                <ChevronRight className="w-3.5 h-3.5 text-sky-400 mr-1.5 shrink-0 mt-0.5" />
-                                <span>{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          {exp.projects && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-5">
-                              {exp.projects.map((proj, pIdx) => (
-                                <div key={pIdx} className="bg-slate-800/70 p-3 rounded-lg border border-slate-700/80">
-                                  <p className="font-bold text-sky-200 text-xs flex items-center">
-                                    <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-sky-400" /> {proj.name}
-                                  </p>
-                                  <p className="text-xs text-slate-300 mt-1 leading-relaxed">{proj.desc}</p>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-
-                          <div className="flex flex-wrap gap-1.5">
-                            {exp.tags.map(tag => (
-                              <span key={tag} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-700">
-                                #{tag}
-                              </span>
                             ))}
                           </div>
+                        )}
+
+                        <div className="flex flex-wrap gap-1.5">
+                          {exp.tags.map(tag => (
+                            <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200/80">
+                              #{tag}
+                            </span>
+                          ))}
                         </div>
-                      )}
-
-                      {/* 2. 第二階段經歷 (Deloitte): 標準白底 + 鋼灰重音條 */}
-                      {isSecond && (
-                        <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200/90 border-l-4 border-l-slate-700 shadow-sm">
-                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
-                            <div>
-                              <h3 className="text-xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
-                              <p className="text-slate-800 font-semibold text-sm mt-0.5">{exp.role}</p>
-                              <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
-                            </div>
-                            
-                            <div className="px-2.5 py-1 bg-slate-100 rounded text-slate-700 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-200">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-600" /> {exp.period}
-                            </div>
-                          </div>
-
-                          <p className="text-slate-700 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
-                          
-                          <ul className="space-y-2 mb-5">
-                            {exp.details.map((detail, dIdx) => (
-                              <li key={dIdx} className="flex text-xs md:text-sm text-slate-600 leading-relaxed">
-                                <ChevronRight className="w-3.5 h-3.5 text-slate-500 mr-1.5 shrink-0 mt-0.5" />
-                                <span>{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          <div className="flex flex-wrap gap-1.5">
-                            {exp.tags.map(tag => (
-                              <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200">
-                                #{tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* 3. 早期經歷 (KPMG): 輕淡微灰背景收斂卡片 */}
-                      {!isLatest && !isSecond && (
-                        <div className="bg-slate-100/70 p-5 md:p-6 rounded-xl border border-slate-200/70 border-l-4 border-l-slate-400">
-                          <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-3">
-                            <div>
-                              <h3 className="text-lg font-bold text-slate-800 tracking-tight">{exp.company}</h3>
-                              <p className="text-slate-700 font-semibold text-xs md:text-sm mt-0.5">{exp.role}</p>
-                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{exp.size}</p>
-                            </div>
-                            
-                            <div className="px-2.5 py-1 bg-white/80 rounded text-slate-600 text-xs font-medium flex items-center whitespace-nowrap shrink-0 border border-slate-200/80">
-                              <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-500" /> {exp.period}
-                            </div>
-                          </div>
-
-                          <p className="text-slate-600 text-xs font-medium mb-3 leading-relaxed">{exp.description}</p>
-                          
-                          <ul className="space-y-1.5 mb-4">
-                            {exp.details.map((detail, dIdx) => (
-                              <li key={dIdx} className="flex text-xs text-slate-600 leading-relaxed">
-                                <ChevronRight className="w-3.5 h-3.5 text-slate-400 mr-1.5 shrink-0 mt-0.5" />
-                                <span>{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          <div className="flex flex-wrap gap-1.5">
-                            {exp.tags.map(tag => (
-                              <span key={tag} className="text-[10px] bg-white text-slate-500 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200">
-                                #{tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      </div>
                     </div>
                   );
                 })}
