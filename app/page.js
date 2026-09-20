@@ -30,7 +30,7 @@ const Resume = () => {
     }
   ];
 
-  // Patents Data (2025 年專利統一為 "2025 (granted)")
+  // Patents Data (2025 年統一為 "2025 (granted)")
   const patents = [
     {
       title: "REAL-TIME LOAN NOTIFICATION SYSTEM",
@@ -118,32 +118,29 @@ const Resume = () => {
     }
   ];
   
-  // Icon 統一採用高對比科技天藍 (sky-400)
+  // Icon 統一使用高階深藏青色 (slate-800)，展現低調專業感
   const certificates = [
-    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-sky-400" /> },
-    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-sky-400" /> },
-    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-sky-400" /> },
-    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-sky-400" /> },
-    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-sky-400" /> },
-    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-sky-400" /> },
-    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-sky-400" /> },
-    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-sky-400" /> },
-    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-sky-400" /> }
+    { title: "Certified Public Accountant (CPA)", icon: <Award className="w-4 h-4 text-slate-800" /> },
+    { title: "Project Management Professional (PMP)", icon: <CheckCircle2 className="w-4 h-4 text-slate-800" /> },
+    { title: "ISO/IEC 42001:2023 Lead Auditor", icon: <Diameter className="w-4 h-4 text-slate-800" /> },
+    { title: "IBM Data Science Professional", icon: <Calculator className="w-4 h-4 text-slate-800" /> },
+    { title: "IBM Data Analyst Professional", icon: <Database className="w-4 h-4 text-slate-800" /> },
+    { title: "Google Cloud Digital Leader", icon: <Layout className="w-4 h-4 text-slate-800" /> },
+    { title: "Deep Learning Specialization", icon: <Binary className="w-4 h-4 text-slate-800" /> },
+    { title: "Generative AI with LLMs", icon: <Cpu className="w-4 h-4 text-slate-800" /> },
+    { title: "UiPath_RPA Developer Diploma", icon: <Binoculars className="w-4 h-4 text-slate-800" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 md:px-8 font-sans antialiased selection:bg-sky-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#F8FAFC] py-12 px-4 md:px-8 font-sans text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
       <div className="max-w-5xl mx-auto">
         
         {/* Header Section */}
-        <header className="bg-slate-900/90 rounded-2xl shadow-xl p-6 md:p-10 mb-10 border border-slate-800 relative overflow-hidden backdrop-blur-md">
-          {/* 光暈背景裝飾 */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
-
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <header className="bg-white rounded-xl shadow-[0_1px_3px_0_rgba(15,23,42,0.06)] p-6 md:p-10 mb-8 border border-slate-200/80">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             {/* Profile Image Container */}
             <div className="relative shrink-0">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden border-2 border-slate-700 shadow-2xl">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
                 <img 
                   src="/profile.jpg" 
                   alt="Albert Profile" 
@@ -155,32 +152,32 @@ const Resume = () => {
 
             {/* Basic Info */}
             <div className="flex-1 text-center md:text-left">
-              <div className="mb-4">
-                <h1 className="text-4xl font-black text-white tracking-tight">Albert Liu</h1>
-                <p className="text-lg text-sky-400 font-bold mt-2 tracking-tight">
+              <div className="mb-3">
+                <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Albert Liu</h1>
+                <p className="text-base md:text-lg text-slate-700 font-semibold mt-1.5 tracking-tight leading-snug">
                   Data Science Section Manager | Data Analytics | AI Governance | Strategic Planning | Project Management
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-6 text-sm text-slate-300 font-medium">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5 text-xs md:text-sm text-slate-600 font-medium">
                 <div className="flex items-center justify-center md:justify-start">
-                  <Briefcase className="w-4 h-4 mr-2 text-sky-400" /> 11~12 Years of Experience
+                  <Briefcase className="w-4 h-4 mr-2 text-slate-700" /> 11~12 Years of Experience
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <MapPin className="w-4 h-4 mr-2 text-sky-400" /> Daan Dist., Taipei City, Taiwan
+                  <MapPin className="w-4 h-4 mr-2 text-slate-700" /> Daan Dist., Taipei City, Taiwan
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <Mail className="w-4 h-4 mr-2 text-sky-400" /> albertliu141@gmail.com
+                  <Mail className="w-4 h-4 mr-2 text-slate-700" /> albertliu141@gmail.com
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
-                  <ShieldCheck className="w-4 h-4 mr-2 text-sky-400" /> CPA | PMP | IBM DS | AI Application Planner
+                  <ShieldCheck className="w-4 h-4 mr-2 text-slate-700" /> CPA | PMP | IBM DS | AI Application Planner
                 </div>
               </div>
 
-              {/* 技能 Badge */}
-              <div className="mt-7 flex flex-wrap justify-center md:justify-start gap-2">
+              {/* 核心能力黑框標籤 */}
+              <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-2">
                 {["AI Governance", "MLOps", "Data Modeling", "Data Science", "Scrum"].map(skill => (
-                  <span key={skill} className="bg-sky-950/60 text-sky-300 border border-sky-800/60 px-3.5 py-1 rounded-md text-xs font-mono font-semibold tracking-wide shadow-sm">
+                  <span key={skill} className="bg-slate-900 text-slate-100 px-3 py-1 rounded text-xs font-medium tracking-wide">
                     {skill}
                   </span>
                 ))}
@@ -192,19 +189,19 @@ const Resume = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Left Column: Education, Certs, Tools, Patents (1/3 Width) */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="lg:col-span-1 space-y-6">
 
             {/* Education */}
             <section>
-              <h2 className="text-lg font-bold text-white mb-4 flex items-center tracking-tight border-b border-slate-800 pb-2">
-                <GraduationCap className="w-5 h-5 mr-2 text-sky-400" /> Education
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <GraduationCap className="w-4 h-4 mr-2 text-slate-800" /> Education
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {education.map((edu, i) => (
-                  <div key={i} className="p-4 rounded-xl border border-slate-800 bg-slate-900/80 shadow-sm hover:border-sky-500/50 transition-colors">
-                    <p className="text-xs font-bold text-sky-400 mb-1">{edu.period}</p>
-                    <h3 className="font-bold text-white text-sm">{edu.school}</h3>
-                    <p className="text-xs text-slate-300 mt-0.5">{edu.degree}</p>
+                  <div key={i} className="p-3.5 rounded-lg border border-slate-200 bg-white shadow-[0_1px_2px_0_rgba(15,23,42,0.03)] hover:border-slate-300 transition-colors">
+                    <p className="text-[11px] font-semibold text-slate-500 mb-0.5">{edu.period}</p>
+                    <h3 className="font-bold text-slate-900 text-xs md:text-sm">{edu.school}</h3>
+                    <p className="text-xs text-slate-600 mt-0.5">{edu.degree}</p>
                   </div>
                 ))}
               </div>
@@ -212,43 +209,43 @@ const Resume = () => {
 
             {/* Certifications */}
             <section>
-              <h2 className="text-lg font-bold text-white mb-4 flex items-center tracking-tight border-b border-slate-800 pb-2">
-                <Award className="w-5 h-5 mr-2 text-sky-400" /> Certifications
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Award className="w-4 h-4 mr-2 text-slate-800" /> Certifications
               </h2>
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 {certificates.map((cert, i) => (
-                  <div key={i} className="flex items-center p-3 bg-slate-900/80 rounded-lg border border-slate-800 shadow-sm hover:border-slate-700 transition-colors">
+                  <div key={i} className="flex items-center p-2.5 bg-white rounded-lg border border-slate-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.03)]">
                     {cert.icon}
-                    <span className="ml-2.5 text-xs font-semibold text-slate-200">{cert.title}</span>
+                    <span className="ml-2 text-xs font-semibold text-slate-800">{cert.title}</span>
                   </div>
                 ))}
-                <div className="p-3 bg-slate-900/40 rounded-lg border border-slate-800">
-                  <p className="text-[10px] text-sky-400 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
-                  <p className="text-xs text-slate-400 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
+                <div className="p-3 bg-slate-100/70 rounded-lg border border-slate-200/80">
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-1">Financial Licenses</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">Bank Internal Control & Audit, Credit Specialist, Foreign Exchange, AML/CFT, FinTech Proficiency, Legal Compliance</p>
                 </div>
               </div>
             </section>
 
             {/* Technical Tools */}
             <section>
-              <h2 className="text-lg font-bold text-white mb-4 flex items-center tracking-tight border-b border-slate-800 pb-2">
-                <Code2 className="w-5 h-5 mr-2 text-sky-400" /> Technical Tools
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <Code2 className="w-4 h-4 mr-2 text-slate-800" /> Technical Tools
               </h2>
-              <div className="bg-slate-900/80 p-5 rounded-xl border border-slate-800 shadow-sm space-y-4">
+              <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.03)] space-y-3.5">
                 <div>
-                  <p className="text-[11px] font-bold text-sky-400 uppercase mb-2 tracking-wider">Programming & DB</p>
+                  <p className="text-[10px] font-bold text-slate-500 uppercase mb-2 tracking-wider">Programming & DB</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Python", "MS SQL", "SAS", "VBA", "HDFS", "MongoDB"].map(t => (
-                      <span key={t} className="px-2.5 py-1 bg-slate-800 rounded text-xs font-mono font-semibold text-slate-200">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-slate-100 rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
-                <hr className="border-slate-800" />
+                <hr className="border-slate-100" />
                 <div>
-                  <p className="text-[11px] font-bold text-sky-400 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
+                  <p className="text-[10px] font-bold text-slate-500 uppercase mb-2 tracking-wider">Analysis & Visualization</p>
                   <div className="flex flex-wrap gap-1.5">
                     {["Tableau", "Scikit-learn"].map(t => (
-                      <span key={t} className="px-2.5 py-1 bg-slate-800 rounded text-xs font-mono font-semibold text-slate-200">{t}</span>
+                      <span key={t} className="px-2 py-0.5 bg-slate-100 rounded text-xs font-medium text-slate-700">{t}</span>
                     ))}
                   </div>
                 </div>
@@ -257,19 +254,19 @@ const Resume = () => {
 
             {/* Patents Section */}
             <section>
-              <h2 className="text-lg font-bold text-white mb-4 flex items-center tracking-tight border-b border-slate-800 pb-2">
-                <FileCheck className="w-5 h-5 mr-2 text-sky-400" /> Patents
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3 flex items-center border-b border-slate-200 pb-2">
+                <FileCheck className="w-4 h-4 mr-2 text-slate-800" /> Patents
               </h2>
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 {patents.map((item, i) => (
-                  <div key={i} className="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800 shadow-sm hover:border-sky-500/50 transition-colors">
+                  <div key={i} className="bg-white p-3 rounded-lg border border-slate-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.03)] hover:border-slate-300 transition-colors">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[10px] font-bold bg-sky-950/80 text-sky-300 px-2 py-0.5 rounded border border-sky-800/60">
+                      <span className="text-[10px] font-semibold bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200/80">
                         {item.type}
                       </span>
-                      <span className="text-[11px] text-slate-400 font-semibold">{item.year}</span>
+                      <span className="text-[11px] text-slate-500 font-medium">{item.year}</span>
                     </div>
-                    <h3 className="font-bold text-slate-100 text-xs leading-snug">{item.title}</h3>
+                    <h3 className="font-bold text-slate-900 text-xs leading-snug">{item.title}</h3>
                   </div>
                 ))}
               </div>
@@ -278,48 +275,48 @@ const Resume = () => {
           </div>
 
           {/* Right Column: Work Experience (2/3 Width) */}
-          <div className="lg:col-span-2 space-y-10">
+          <div className="lg:col-span-2 space-y-8">
             
             {/* Work Experience */}
             <section>
-              <h2 className="text-lg font-bold text-white mb-6 flex items-center tracking-tight border-b border-slate-800 pb-2">
-                <Briefcase className="w-5 h-5 mr-2 text-sky-400" /> Work Experience
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-5 flex items-center border-b border-slate-200 pb-2">
+                <Briefcase className="w-4 h-4 mr-2 text-slate-800" /> Work Experience
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {experiences.map((exp, idx) => (
                   <div key={idx} className="relative">
-                    <div className="bg-slate-900/80 p-6 md:p-8 rounded-xl border border-slate-800 shadow-lg">
-                      <div className="flex flex-col md:flex-row justify-between items-start gap-3 mb-5">
+                    <div className="bg-white p-6 md:p-7 rounded-xl border border-slate-200 shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+                      <div className="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
                         <div>
-                          <h3 className="text-2xl font-black text-white tracking-tight">{exp.company}</h3>
-                          <p className="text-sky-400 font-bold text-base mt-0.5">{exp.role}</p>
-                          <p className="text-xs text-slate-400 font-medium mt-0.5">{exp.size}</p>
+                          <h3 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">{exp.company}</h3>
+                          <p className="text-slate-800 font-semibold text-sm md:text-base mt-0.5">{exp.role}</p>
+                          <p className="text-xs text-slate-500 font-medium mt-0.5">{exp.size}</p>
                         </div>
                         
-                        <div className="px-3 py-1 bg-slate-800/80 rounded text-slate-200 text-xs font-bold flex items-center whitespace-nowrap shrink-0 border border-slate-700/80">
-                          <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-sky-400" /> {exp.period}
+                        <div className="px-2.5 py-1 bg-slate-100/80 rounded text-slate-700 text-xs font-semibold flex items-center whitespace-nowrap shrink-0 border border-slate-200/80">
+                          <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0 text-slate-600" /> {exp.period}
                         </div>
                       </div>
 
-                      <p className="text-slate-300 text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
+                      <p className="text-slate-700 text-xs md:text-sm font-medium mb-4 leading-relaxed">{exp.description}</p>
                       
-                      <ul className="space-y-2.5 mb-6">
+                      <ul className="space-y-2 mb-5">
                         {exp.details.map((detail, dIdx) => (
-                          <li key={dIdx} className="flex text-xs md:text-sm text-slate-300 leading-relaxed">
-                            <ChevronRight className="w-4 h-4 text-sky-400 mr-1.5 shrink-0 mt-0.5" />
+                          <li key={dIdx} className="flex text-xs md:text-sm text-slate-600 leading-relaxed">
+                            <ChevronRight className="w-3.5 h-3.5 text-slate-400 mr-1.5 shrink-0 mt-0.5" />
                             <span>{detail}</span>
                           </li>
                         ))}
                       </ul>
 
                       {exp.projects && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-5">
                           {exp.projects.map((proj, pIdx) => (
-                            <div key={pIdx} className="bg-slate-800/40 p-3.5 rounded-lg border border-slate-700/60 hover:border-sky-500/40 transition-colors">
-                              <p className="font-bold text-sky-300 text-xs flex items-center">
-                                <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-sky-400" /> {proj.name}
+                            <div key={pIdx} className="bg-slate-50/80 p-3 rounded-lg border border-slate-200/80">
+                              <p className="font-bold text-slate-900 text-xs flex items-center">
+                                <TrendingUp className="w-3.5 h-3.5 mr-1.5 text-slate-700" /> {proj.name}
                               </p>
-                              <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">{proj.desc}</p>
+                              <p className="text-xs text-slate-600 mt-1 leading-relaxed">{proj.desc}</p>
                             </div>
                           ))}
                         </div>
@@ -327,7 +324,7 @@ const Resume = () => {
 
                       <div className="flex flex-wrap gap-1.5">
                         {exp.tags.map(tag => (
-                          <span key={tag} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded font-mono font-medium tracking-wider uppercase border border-slate-700/60">
+                          <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider border border-slate-200/80">
                             #{tag}
                           </span>
                         ))}
@@ -342,7 +339,7 @@ const Resume = () => {
 
         </div>
 
-        <footer className="text-center text-slate-500 text-xs mt-16 pb-8">
+        <footer className="text-center text-slate-400 text-xs mt-16 pb-8">
           <p>© 2026 Albert - Professional Portfolio Profile</p>
         </footer>
       </div>
